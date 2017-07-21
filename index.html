@@ -13,6 +13,7 @@
         <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="./css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/highlight.css">
+        <link href="./css/extra.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -58,6 +59,9 @@
                         <a href=".">Getting Started</a>
                     </li>
                     <li >
+                        <a href="commands/">Commands</a>
+                    </li>
+                    <li >
                         <a href="faq/">FAQ</a>
                     </li>
                 </ul>
@@ -74,7 +78,7 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="faq/">
+                        <a rel="prev" href="commands/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -86,28 +90,69 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
-            <li><a href="#commands">Commands</a></li>
-            <li><a href="#project-layout">Project layout</a></li>
+        <li class="main active"><a href="#gd-edit">gd-edit</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#setting-up">Setting up</a></li>
+            <li><a href="#further-help">Further help</a></li>
+            <li><a href="#other-tools">Other tools</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="gd-edit">gd-edit</h1>
+<p>Edit your GD character quickly from the commandline!</p>
+<hr />
+<p>gd-edit is a handy little utility that lets you modify your Grim Dawn
+characters however you like! Be warned though that this <em>is</em> a commandline
+utility. If working with commandline programs seem like a relic of the past for
+you, you may also want to consider using <a href="http://www.grimdawn.com/forums/showthread.php?t=23414">GD
+stash</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>This little program needs Java 8 to run. To get your very own copy, visit
+<a href="https://java.com/download/">java.com</a>.</p>
+<p>Then, please grab the version for your platform:</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
+<li>
+<p><a href="http://tiny.cc/gdedexe">Windows version</a></p>
+</li>
+<li>
+<p><a href="http://tiny.cc/gdednixbin">Linux version</a></p>
+</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<p>Just double click the downloaded exe and you're ready to go!</p>
+<h2 id="setting-up">Setting up</h2>
+<p>If you're running the steam version GD, the program should hopefully find your
+installation and be ready to go right out of the box.</p>
+<p>If you're not running the steam version, or if you have GD installed in some
+super secret custom path, then you'll need to help the program find your game
+installation and save directory.</p>
+<p>In those cases, please run the following commands the first time you fire up
+the editor:</p>
+<pre><code class="sh">gamedir &quot;long path to game installation directory here&quot;
+savedir &quot;long path to save game directory here&quot;
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The directory paths should placed inside double quotes. Otherwise, the program
+will stop processing the path when it encounters the first 'space' character in
+the path!</p>
+</div>
+<h2 id="further-help">Further help</h2>
+<p>Is something not working? Need some help?</p>
+<p>Please see the <a href="faq/">FAQ</a>! </p>
+<p><em>OR...</em></p>
+<p>Use the search button at the top of the page!</p>
+<p><em>OR...</em></p>
+<p>Leave a message in the <a href="http://www.grimdawn.com/forums/showthread.php?
+t=48356">GD forums</a> and I'll try to get back to you as soon as I can!</p>
+<h2 id="other-tools">Other tools</h2>
+<p>If you've tried the tool, but commandline tools simply isn't your cup of tea,
+you might want to take a look at:</p>
+<ul>
+<li><a href="http://www.grimdawn.com/forums/showthread.php?t=23414">GD Stash</a></li>
+<li><a href="http://www.grimdawn.com/forums/showthread.php?t=9343">GD Defiler</a></li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
@@ -146,5 +191,5 @@ docs/
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-07-21 05:50:13
+Build Date UTC : 2017-07-21 07:27:35
 -->

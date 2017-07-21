@@ -2,43 +2,73 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "text": "gd-edit\n\n\nEdit your GD character quickly from the commandline!\n\n\n\n\ngd-edit is a handy little utility that lets you modify your Grim Dawn\ncharacters however you like! Be warned though that this \nis\n a commandline\nutility. If working with commandline programs seem like a relic of the past for\nyou, you may also want to consider using \nGD\nstash\n.\n\n\nInstallation\n\n\nThis little program needs Java 8 to run. To get your very own copy, visit\n\njava.com\n.\n\n\nThen, please grab the version for your platform:\n\n\n\n\n\n\nWindows version\n\n\n\n\n\n\nLinux version\n\n\n\n\n\n\nJust double click the downloaded exe and you're ready to go!\n\n\nSetting up\n\n\nIf you're running the steam version GD, the program should hopefully find your\ninstallation and be ready to go right out of the box.\n\n\nIf you're not running the steam version, or if you have GD installed in some\nsuper secret custom path, then you'll need to help the program find your game\ninstallation and save directory.\n\n\nIn those cases, please run the following commands the first time you fire up\nthe editor:\n\n\ngamedir \nlong path to game installation directory here\n\nsavedir \nlong path to save game directory here\n\n\n\n\n\n\n\nNote\n\n\nThe directory paths should placed inside double quotes. Otherwise, the program\nwill stop processing the path when it encounters the first 'space' character in\nthe path!\n\n\n\n\nFurther help\n\n\nIs something not working? Need some help?\n\n\nPlease see the \nFAQ\n! \n\n\nOR...\n\n\nUse the search button at the top of the page!\n\n\nOR...\n\n\nLeave a message in the \nGD forums\n and I'll try to get back to you as soon as I can!\n\n\nOther tools\n\n\nIf you've tried the tool, but commandline tools simply isn't your cup of tea,\nyou might want to take a look at:\n\n\n\n\nGD Stash\n\n\nGD Defiler", 
             "title": "Getting Started"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/#gd-edit", 
+            "text": "Edit your GD character quickly from the commandline!   gd-edit is a handy little utility that lets you modify your Grim Dawn\ncharacters however you like! Be warned though that this  is  a commandline\nutility. If working with commandline programs seem like a relic of the past for\nyou, you may also want to consider using  GD\nstash .", 
+            "title": "gd-edit"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "location": "/#installation", 
+            "text": "This little program needs Java 8 to run. To get your very own copy, visit java.com .  Then, please grab the version for your platform:    Windows version    Linux version    Just double click the downloaded exe and you're ready to go!", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/#setting-up", 
+            "text": "If you're running the steam version GD, the program should hopefully find your\ninstallation and be ready to go right out of the box.  If you're not running the steam version, or if you have GD installed in some\nsuper secret custom path, then you'll need to help the program find your game\ninstallation and save directory.  In those cases, please run the following commands the first time you fire up\nthe editor:  gamedir  long path to game installation directory here \nsavedir  long path to save game directory here    Note  The directory paths should placed inside double quotes. Otherwise, the program\nwill stop processing the path when it encounters the first 'space' character in\nthe path!", 
+            "title": "Setting up"
+        }, 
+        {
+            "location": "/#further-help", 
+            "text": "Is something not working? Need some help?  Please see the  FAQ !   OR...  Use the search button at the top of the page!  OR...  Leave a message in the  GD forums  and I'll try to get back to you as soon as I can!", 
+            "title": "Further help"
+        }, 
+        {
+            "location": "/#other-tools", 
+            "text": "If you've tried the tool, but commandline tools simply isn't your cup of tea,\nyou might want to take a look at:   GD Stash  GD Defiler", 
+            "title": "Other tools"
+        }, 
+        {
+            "location": "/commands/", 
+            "text": "Commands\n\n\nThe things that makes the editor go!\n\n\n\n\nOh, looky! A placeholder page!\n\n\nPlease use the \"help\" command for now! x)", 
             "title": "Commands"
         }, 
         {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/commands/#commands", 
+            "text": "The things that makes the editor go!   Oh, looky! A placeholder page!  Please use the \"help\" command for now! x)", 
+            "title": "Commands"
         }, 
         {
             "location": "/faq/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "text": "FAQ\n\n\nAn answer for every question you have!\n\n\n\n\nHow do I add an item to my inventory/sack?\n\n\nset inv/1/items \nan item name\n 100\n        |            |          |\n        |            |          |--\n optional character level override\n        |            |\n        |            |--\n new item name\n        |\n        |--\n First sack (but considered \nsecond inventory\n)\n\n\n\n\nThis will generate the item you named and place it into the first inventory\nsack. The command usually generates an item with affixes that's suitable for\nyour character's level. However, you can also ask the editor to pretend your\ncharacter is at another level by adding an optional number to the end, as is\ndone in this example. This makes it so the editor will generate an item\nsuitable for a character of level 100.\n\n\n\n\nNote\n\n\nIf the inventory/sack you specified doesn't have the space to hold the\nitem, the editor will complain loudly. You might want to try another sack\nthen.\n\n\n\n\n\n\nHow do I change the stack count on an item?\n\n\nYou'll have to know exactly \nwhere\n that item is to change the stack count. You\nmay want to look through your inventory with the 'show' command like so:\n\n\nshow inv/1/items\n\n\n\n\nAfter you've located the item you want to alter, do:\n\n\nset inv/1/items/0/count 99\n        |       |       |\n        |       |       |--\n new item stack count\n        |       |\n        |       |--\n First item\n        |\n        |--\n First sack (but considered \nsecond inventory\n)\n\n\n\n\n\n\nHow do I respec my character?\n\n\nYou want the \"respec\" command!\n\n\nIt's as simple as running:\n\n\nrespec\n\n\n\n\n\n\nHow to I change my faction alignment?\n\n\nTo see your faction values:\n\n\nshow faction-values\n\n\n\n\nTo set them:\n\n\nset faction-values/\nfaction index\n/faction-value \nnew faction value here\n\n\n\n\n\nwhere the faction index is a number from 0-21. The \"show\" command should have\nshown you which faction corresponds to which index.", 
             "title": "FAQ"
         }, 
         {
-            "location": "/faq/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/faq/#faq", 
+            "text": "An answer for every question you have!", 
+            "title": "FAQ"
         }, 
         {
-            "location": "/faq/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/faq/#how-do-i-add-an-item-to-my-inventorysack", 
+            "text": "set inv/1/items  an item name  100\n        |            |          |\n        |            |          |--  optional character level override\n        |            |\n        |            |--  new item name\n        |\n        |--  First sack (but considered  second inventory )  This will generate the item you named and place it into the first inventory\nsack. The command usually generates an item with affixes that's suitable for\nyour character's level. However, you can also ask the editor to pretend your\ncharacter is at another level by adding an optional number to the end, as is\ndone in this example. This makes it so the editor will generate an item\nsuitable for a character of level 100.   Note  If the inventory/sack you specified doesn't have the space to hold the\nitem, the editor will complain loudly. You might want to try another sack\nthen.", 
+            "title": "How do I add an item to my inventory/sack?"
         }, 
         {
-            "location": "/faq/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/faq/#how-do-i-change-the-stack-count-on-an-item", 
+            "text": "You'll have to know exactly  where  that item is to change the stack count. You\nmay want to look through your inventory with the 'show' command like so:  show inv/1/items  After you've located the item you want to alter, do:  set inv/1/items/0/count 99\n        |       |       |\n        |       |       |--  new item stack count\n        |       |\n        |       |--  First item\n        |\n        |--  First sack (but considered  second inventory )", 
+            "title": "How do I change the stack count on an item?"
+        }, 
+        {
+            "location": "/faq/#how-do-i-respec-my-character", 
+            "text": "You want the \"respec\" command!  It's as simple as running:  respec", 
+            "title": "How do I respec my character?"
+        }, 
+        {
+            "location": "/faq/#how-to-i-change-my-faction-alignment", 
+            "text": "To see your faction values:  show faction-values  To set them:  set faction-values/ faction index /faction-value  new faction value here   where the faction index is a number from 0-21. The \"show\" command should have\nshown you which faction corresponds to which index.", 
+            "title": "How to I change my faction alignment?"
         }
     ]
 }

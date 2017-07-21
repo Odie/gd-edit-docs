@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>FAQ - gd-edit docs</title>
+        <title>Commands - gd-edit docs</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -58,11 +58,11 @@
                     <li >
                         <a href="..">Getting Started</a>
                     </li>
-                    <li >
-                        <a href="../commands/">Commands</a>
-                    </li>
                     <li class="active">
-                        <a href="./">FAQ</a>
+                        <a href="./">Commands</a>
+                    </li>
+                    <li >
+                        <a href="../faq/">FAQ</a>
                     </li>
                 </ul>
 
@@ -73,12 +73,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../commands/">
+                        <a rel="next" href="..">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../faq/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -90,76 +90,16 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#faq">FAQ</a></li>
-            <li><a href="#how-do-i-add-an-item-to-my-inventorysack">How do I add an item to my inventory/sack?</a></li>
-            <li><a href="#how-do-i-change-the-stack-count-on-an-item">How do I change the stack count on an item?</a></li>
-            <li><a href="#how-do-i-respec-my-character">How do I respec my character?</a></li>
-            <li><a href="#how-to-i-change-my-faction-alignment">How to I change my faction alignment?</a></li>
+        <li class="main active"><a href="#commands">Commands</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="faq">FAQ</h1>
-<p>An answer for every question you have!</p>
+<h1 id="commands">Commands</h1>
+<p>The things that makes the editor go!</p>
 <hr />
-<h2 id="how-do-i-add-an-item-to-my-inventorysack">How do I add an item to my inventory/sack?</h2>
-<pre><code class="sh">set inv/1/items &quot;an item name&quot; 100
-        |            |          |
-        |            |          |--&gt; optional character level override
-        |            |
-        |            |--&gt; new item name
-        |
-        |--&gt; First sack (but considered &quot;second inventory&quot;)
-</code></pre>
-
-<p>This will generate the item you named and place it into the first inventory
-sack. The command usually generates an item with affixes that's suitable for
-your character's level. However, you can also ask the editor to pretend your
-character is at another level by adding an optional number to the end, as is
-done in this example. This makes it so the editor will generate an item
-suitable for a character of level 100.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If the inventory/sack you specified doesn't have the space to hold the
-item, the editor will complain loudly. You might want to try another sack
-then.</p>
-</div>
-<hr />
-<h2 id="how-do-i-change-the-stack-count-on-an-item">How do I change the stack count on an item?</h2>
-<p>You'll have to know exactly <em>where</em> that item is to change the stack count. You
-may want to look through your inventory with the 'show' command like so:</p>
-<pre><code class="sh">show inv/1/items
-</code></pre>
-
-<p>After you've located the item you want to alter, do:</p>
-<pre><code class="sh">set inv/1/items/0/count 99
-        |       |       |
-        |       |       |--&gt; new item stack count
-        |       |
-        |       |--&gt; First item
-        |
-        |--&gt; First sack (but considered &quot;second inventory&quot;)
-</code></pre>
-
-<hr />
-<h2 id="how-do-i-respec-my-character">How do I respec my character?</h2>
-<p>You want the "respec" command!</p>
-<p>It's as simple as running:</p>
-<pre><code class="sh">respec
-</code></pre>
-
-<hr />
-<h2 id="how-to-i-change-my-faction-alignment">How to I change my faction alignment?</h2>
-<p>To see your faction values:</p>
-<pre><code class="sh">show faction-values
-</code></pre>
-
-<p>To set them:</p>
-<pre><code class="sh">set faction-values/&lt;faction index&gt;/faction-value &lt;new faction value here&gt;
-</code></pre>
-
-<p>where the faction index is a number from 0-21. The "show" command should have
-shown you which faction corresponds to which index.</p></div>
+<p>Oh, looky! A placeholder page!</p>
+<p>Please use the "help" command for now! x)</p></div>
         </div>
 
         <footer class="col-md-12">
