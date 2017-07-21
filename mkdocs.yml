@@ -1,1 +1,6 @@
-site_name: My Docs
+site_name: gd-edit docs
+pages:
+  - Getting Started: index.md
+  - FAQ: faq.md
+
+google_analytics: ['UA-102949209-1', 'auto']

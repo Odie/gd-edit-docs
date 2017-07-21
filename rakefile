@@ -1,0 +1,5 @@
+task :default => :deploy
+
+task :deploy do
+	sh "mkdocs gh-deploy"
+end
