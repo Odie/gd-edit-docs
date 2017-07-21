@@ -1,6 +1,12 @@
 site_name: gd-edit docs
 pages:
   - Getting Started: index.md
+  - Commands: commands.md
   - FAQ: faq.md
+
+markdown_extensions:
+  - admonition
+
+extra_css: [css/extra.css]
 
 google_analytics: ['UA-102949209-1', 'auto']
