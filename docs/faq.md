@@ -69,4 +69,3 @@ set faction-values/<faction index>/faction-value <new faction value here>
 ```
 where the faction index is a number from 0-21. The "show" command should have
 shown you which faction corresponds to which index.
-

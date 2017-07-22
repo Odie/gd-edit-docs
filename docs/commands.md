@@ -2,6 +2,8 @@
 
 The things that makes the editor go!
 
+---
+
 ## The Basics
 
 ### show

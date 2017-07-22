@@ -46,7 +46,7 @@ savedir "long path to save game directory here"
 ## Further help
 Is something not working? Need some help?
 
-Please see the [FAQ](faq.md)! 
+Please see the [FAQ](faq.md)!
 
 *OR...*
 
@@ -63,4 +63,3 @@ you might want to take a look at:
 
 - [GD Stash](http://www.grimdawn.com/forums/showthread.php?t=23414)
 - [GD Defiler](http://www.grimdawn.com/forums/showthread.php?t=9343)
-
