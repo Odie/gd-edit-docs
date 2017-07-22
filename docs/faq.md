@@ -1,5 +1,7 @@
 # FAQ
 
+---
+
 An answer for every question you have!
 
 ---
