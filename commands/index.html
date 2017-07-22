@@ -1,137 +1,1810 @@
+
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
-        <link rel="shortcut icon" href="../img/favicon.ico">
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+    
+    
+      
         <title>Commands - gd-edit docs</title>
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/highlight.css">
-        <link href="../css/extra.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-	
-	<script src="../js/jquery-1.10.2.min.js"></script>
-        <script src="../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../js/highlight.pack.js"></script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-102949209-1', 'auto');
-            ga('send', 'pageview');
-        </script> 
-    </head>
-
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-769c285a91.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="..">gd-edit docs</a>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="gd-edit docs" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Commands
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
         </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                    <li >
-                        <a href="..">Getting Started</a>
-                    </li>
-                    <li class="active">
-                        <a href="./">Commands</a>
-                    </li>
-                    <li >
-                        <a href="../faq/">FAQ</a>
-                    </li>
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
-                    <li >
-                        <a rel="next" href="..">
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="../faq/">
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-            </ul>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    gd-edit docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
 
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#commands">Commands</a></li>
+
+  <li class="md-nav__item">
+    <a href=".." title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Commands
+      </label>
+    
+    <a href="./" title="Commands" class="md-nav__link md-nav__link--active">
+      Commands
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-commands" title="Basic commands" class="md-nav__link">
+    Basic commands
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show" title="show" class="md-nav__link">
+    show
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partial-field-matching" title="Partial field matching" class="md-nav__link">
+    Partial field matching
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" title="set" class="md-nav__link">
+    set
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_1" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-values" title="Setting values" class="md-nav__link">
+    Setting values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#item-creation" title="Item creation" class="md-nav__link">
+    Item creation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write" title="write" class="md-nav__link">
+    write
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_2" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_2" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load" title="load" class="md-nav__link">
+    load
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_3" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" title="update" class="md-nav__link">
+    update
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#details_4" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" title="exit" class="md-nav__link">
+    exit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convenience-commands" title="Convenience commands" class="md-nav__link">
+    Convenience commands
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level" title="level" class="md-nav__link">
+    level
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_3" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_5" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respec" title="respec" class="md-nav__link">
+    respec
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_4" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_6" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#savedir" title="savedir" class="md-nav__link">
+    savedir
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_5" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_7" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savedir-clear" title="savedir clear" class="md-nav__link">
+    savedir clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamedir" title="gamedir" class="md-nav__link">
+    gamedir
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_6" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_8" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamedir-clear" title="gamedir clear" class="md-nav__link">
+    gamedir clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod" title="mod" class="md-nav__link">
+    mod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod-pick" title="mod pick" class="md-nav__link">
+    mod pick
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_7" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_9" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod-clear" title="mod clear" class="md-nav__link">
+    mod clear
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-manipulation" title="Class manipulation" class="md-nav__link">
+    Class manipulation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class" title="class" class="md-nav__link">
+    class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-add" title="class add" class="md-nav__link">
+    class add
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_8" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-list" title="class list" class="md-nav__link">
+    class list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-remove" title="class remove" class="md-nav__link">
+    class remove
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_9" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-exploration" title="Database exploration" class="md-nav__link">
+    Database exploration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#db" title="db" class="md-nav__link">
+    db
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage_10" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_10" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q" title="q" class="md-nav__link">
+    q
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_11" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_11" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#match-condition" title="Match condition" class="md-nav__link">
+    Match condition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-ordering" title="Result ordering" class="md-nav__link">
+    Result ordering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qshow" title="qshow" class="md-nav__link">
+    qshow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#details_12" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qn" title="qn" class="md-nav__link">
+    qn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+  
+</nav>
+    
+  </li>
 
-<h1 id="commands">Commands</h1>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-commands" title="Basic commands" class="md-nav__link">
+    Basic commands
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show" title="show" class="md-nav__link">
+    show
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partial-field-matching" title="Partial field matching" class="md-nav__link">
+    Partial field matching
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" title="set" class="md-nav__link">
+    set
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_1" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-values" title="Setting values" class="md-nav__link">
+    Setting values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#item-creation" title="Item creation" class="md-nav__link">
+    Item creation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write" title="write" class="md-nav__link">
+    write
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_2" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_2" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load" title="load" class="md-nav__link">
+    load
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_3" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" title="update" class="md-nav__link">
+    update
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#details_4" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" title="exit" class="md-nav__link">
+    exit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convenience-commands" title="Convenience commands" class="md-nav__link">
+    Convenience commands
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level" title="level" class="md-nav__link">
+    level
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_3" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_5" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respec" title="respec" class="md-nav__link">
+    respec
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_4" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_6" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#savedir" title="savedir" class="md-nav__link">
+    savedir
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_5" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_7" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savedir-clear" title="savedir clear" class="md-nav__link">
+    savedir clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamedir" title="gamedir" class="md-nav__link">
+    gamedir
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_6" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_8" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamedir-clear" title="gamedir clear" class="md-nav__link">
+    gamedir clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod" title="mod" class="md-nav__link">
+    mod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod-pick" title="mod pick" class="md-nav__link">
+    mod pick
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_7" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_9" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod-clear" title="mod clear" class="md-nav__link">
+    mod clear
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-manipulation" title="Class manipulation" class="md-nav__link">
+    Class manipulation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class" title="class" class="md-nav__link">
+    class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-add" title="class add" class="md-nav__link">
+    class add
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_8" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-list" title="class list" class="md-nav__link">
+    class list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-remove" title="class remove" class="md-nav__link">
+    class remove
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_9" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-exploration" title="Database exploration" class="md-nav__link">
+    Database exploration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#db" title="db" class="md-nav__link">
+    db
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage_10" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_10" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q" title="q" class="md-nav__link">
+    q
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_11" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_11" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#match-condition" title="Match condition" class="md-nav__link">
+    Match condition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-ordering" title="Result ordering" class="md-nav__link">
+    Result ordering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qshow" title="qshow" class="md-nav__link">
+    qshow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#details_12" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qn" title="qn" class="md-nav__link">
+    qn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="commands">Commands</h1>
+<hr />
 <p>The things that makes the editor go!</p>
 <hr />
-<p>Oh, looky! A placeholder page!</p>
-<p>Please use the "help" command for now! x)</p></div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>var base_url = '..';</script>
-        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
-        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+<p>A commandline program usually gives you a bunch of commands that are somewhat
+"low-level". You can string together multiple commands and change/edit things
+the way you want.</p>
+<p>So! If you somehow can't find a <em>single</em> command that does exact what you want,
+you probably want to try breaking that task down to multiple commands and
+executing them one at a time.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If anything in the documentation starts sounding like gibberish, don't
+worry! The explanations are there for the sake of completeness. You can use
+the editor just fine without knowing all the nitty-gritty details!</p>
 </div>
+<h2 id="basic-commands">Basic commands</h2>
+<h3 id="show">show</h3>
+<p>Explore your data in your save file like a directory path.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you're able to see the field using "show", you can change the field using "set".</p>
+</div>
+<h4 id="usage">Usage</h4>
+<pre><code class="no-highlight">show &lt;field path&gt;
+</code></pre>
 
-    </body>
+<h4 id="examples">Examples</h4>
+<p><code>show inventory-sacks</code> shows content of "inventory-sacks" field</p>
+<p><code>show inv</code> shows the content of the only field that matches "inv" which
+happens to be "inventory-sacks"</p>
+<p><code>show inv/0</code> shows content of the first inventory</p>
+<p><code>show inv/0/items</code> shows all items in the first inventory</p>
+<p><code>show inv/0/items/4</code> shows 5th item in the first inventory</p>
+<h4 id="details">Details</h4>
+<p>The character file holds quite a bit of binary data that's typically hard to
+explore. This command lets you look around the contents of the file almost as if
+you're exploring directories.</p>
+<p>Each path component in the field path needs to be separated by a '/'.</p>
+<h5 id="partial-field-matching">Partial field matching</h5>
+<p>Each component is also used to partially match against potential fields.</p>
+<p>For example, "<strong>in</strong>" will match against "level-<strong>in</strong>-bio", "sh<strong>in</strong>e", "skill-po<strong>in</strong>ts", and more.</p>
+<p>As long as the component uniquely identifies a single field and the field is a
+collection, the editor will allow you to continue navigating deeper into the data
+hierarchy by chaining additional field components.</p>
+<p>--</p>
+<h3 id="set">set</h3>
+<p>Set fields in the save file</p>
+<h4 id="usage_1">Usage</h4>
+<pre><code class="no-highlight">set &lt;field path&gt; &lt;new value here&gt;
+set &lt;field path to inventory items&gt; &lt;item name&gt; &lt;optional character level&gt;
+set &lt;field path to inventory items collection&gt; &lt;item name&gt; &lt;optional character level&gt;
+</code></pre>
+
+<h4 id="examples_1">Examples</h4>
+<p><code>set iron 1000000</code> gives your character 1,000,000 iron for all your shopping needs
+<code>set character-name Morty</code> changes your character name to Morty
+<code>set inv/0/items "sacred hammer of eternal wrath"</code> puts a new fancy item into your inventory</p>
+<h4 id="details_1">Details</h4>
+<p>The 'set' command is actually 2 commands rolled into 1.</p>
+<h5 id="setting-values">Setting values</h5>
+<p><code>set &lt;field path&gt; &lt;new value here&gt;</code></p>
+<p>In the case where the field path refers to an actual value such as: integer, floats, strings, and booleans. It will just set the value to the new value you provided. It will do its best to coerce the value you entered to the correct type.</p>
+<h5 id="item-creation">Item creation</h5>
+<pre><code>set &lt;field path to inventory items&gt; &lt;item name&gt; &lt;optional character level&gt;
+set &lt;field path to inventory items collection&gt; &lt;item name&gt; &lt;optional character level&gt;
+</code></pre>
+
+<p>In the case where the field path refers to an item or an item collection, the editor will attempt to generate an item that matches the <item name> you entered. The editor does this by looking at the available affixes in the game. When possible, it will use "legal" affixes for the base item you asked for.</p>
+<p>If you gave the editor an item collection, such as 'inv/0/items', it will try to find some empty spot in the inventory to place the item into.</p>
+<div class="admonition error">
+<p>The editor needs access to the game database for item creation to work. If
+the editor throws an error during item creation, it is very likely that you
+need to configure the gamedir correctly.</p>
+</div>
+<p>--</p>
+<h3 id="write">write</h3>
+<p>Writes out the character that is currently loaded</p>
+<h4 id="usage_2">Usage</h4>
+<pre><code class="no-highlight">write
+write &lt;new character name&gt;
+</code></pre>
+
+<h4 id="details_2">Details</h4>
+<p><code>write</code> writes out the currently loaded character. A backup is always made
+first so you can try to go back to a previous save file if anything should go
+wrong. If you changed your "character-name" at some point, the editor will also
+move your save files to the matching directory so the game can find it.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While the editor does its best to try <strong>not</strong> clobbering your save file,
+it'd be advisable to make periodic backups on your own, <strong>just in case</strong>.</p>
+</div>
+<p><code>write &lt;new character name&gt;</code> writes out a new copy of the loaded character
+after renaming the character.</p>
+<p>--</p>
+<h3 id="load">load</h3>
+<p>Load from a save file</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code class="no-highlight">load
+</code></pre>
+
+<h4 id="details_3">Details</h4>
+<p>This is an odd command. This is the only command that will take you to a
+different menu. It will actually unload your current character, if any, it then
+shows you the character selection menu.</p>
+<p>You probably expected the command look something like <code>load &lt;character name&gt;</code> That's not really ideal because:</p>
+<ul>
+<li>You may have several savedir configured and have character of the same name</li>
+<li>It's not clear which characters have been found and <em>can</em> be loaded without a menu</li>
+</ul>
+<p>--</p>
+<h3 id="update">update</h3>
+<p>Update to the latest version of gd-edit</p>
+<h4 id="details_4">Details</h4>
+<p>The editor will check for a new version if it hasn't done so in the past 24
+hours. If a new version is found, a prompt should be shown shortly after the
+editor is started.</p>
+<p>Running the <code>update</code> command actually starts the download and relaunches the
+editor, if possible.</p>
+<p>--</p>
+<h3 id="exit">exit</h3>
+<p>Just exits the program. Pretty straightforward!</p>
+<hr />
+<h2 id="convenience-commands">Convenience commands</h2>
+<p>These are commands that typically require complicated operations on the character to complete. While the editor gives you a lot of tools to dig around the game db and alter your save file, sometimes, you just need a bit more oomph out of the editor.</p>
+<h3 id="level">level</h3>
+<p>Set the level of the loaded character to a new value</p>
+<h4 id="usage_3">Usage</h4>
+<p><code>level &lt;new level&gt;</code></p>
+<h4 id="details_5">Details</h4>
+<p>You can level the character both up and down. This command will update the following fields:</p>
+<ul>
+<li>character level (3 separate fields)</li>
+<li>attribute points</li>
+<li>skill points</li>
+<li>experience points</li>
+</ul>
+<h3 id="respec">respec</h3>
+<p>Respecs the loaded character</p>
+<h4 id="usage_4">Usage</h4>
+<pre><code>respec
+respec attributes
+respec devotions
+respec skills
+respec all
+</code></pre>
+
+<h4 id="details_6">Details</h4>
+<p><code>respec</code>, by itself, is the same <code>respec all</code>.</p>
+<p>This is useful when you want to turn your character into another build
+completely. Alternatively, you can also respec only attributes, devotions, or
+skills, if you just want to tweak your build a bit and avoid having to pick
+everything all over again.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In case it isn't clear, the editor doesn't provide any way of actually
+picking devotions and skills. You'll have to jump back into the game to do
+that.</p>
+</div>
+<hr />
+<h2 id="configuration">Configuration</h2>
+<h3 id="savedir">savedir</h3>
+<p>Sets the save game directory to a path</p>
+<h4 id="usage_5">Usage</h4>
+<pre><code>savedir
+savedir &lt;path to save directory&gt;
+</code></pre>
+
+<h4 id="details_7">Details</h4>
+<p>The editor already looks in the following directory by default:</p>
+<ul>
+<li>Steam cloud save directory (fetched from windows registry)</li>
+<li>Documents\My Games\Grim Dawn\save\main</li>
+</ul>
+<p>If, for some reason, the save directory doesn't reside in either of these
+locations, you can use this command to add yet another path for the editor to
+look into.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please point to the save\main directory. Because... reasons?</p>
+</div>
+<h3 id="savedir-clear">savedir clear</h3>
+<p>Removes the previous set game directory</p>
+<h3 id="gamedir">gamedir</h3>
+<p>Sets the game installation directory to a path</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A lot of the editor commands will not work unless the gamedir is configured!</p>
+</div>
+<h4 id="usage_6">Usage</h4>
+<pre><code>gamedir
+gamedir &lt;path to game install directory&gt;
+</code></pre>
+
+<h4 id="details_8">Details</h4>
+<p>The editor will fetch the steam install directory, then look into
+"\steamapps\common\Grim Dawn" sub-directory. If you're not using steam or if
+you've installed Grim Dawn to another directory, you'll need to use this command
+to help the editor find the installation directory.</p>
+<p>The editor needs "database\database.arz" and "resources\Text_EN.arc" to resolve
+affixes, their readable names, among other pieces of data required by various
+commands. Setting this isn't <em>strictly</em> required if you're only using the 'show'
+and 'set' command of the editor. However, it's very likely you'll soon want to
+create items by name and respec your character, etc etc.</p>
+<h3 id="gamedir-clear">gamedir clear</h3>
+<p>Removes the previously set game installation directory</p>
+<h3 id="mod">mod</h3>
+<p>Displays the mod currently selected</p>
+<h3 id="mod-pick">mod pick</h3>
+<p>Picks an installed mod to activate</p>
+<h4 id="usage_7">Usage</h4>
+<p><code>mod pick</code></p>
+<h4 id="details_9">Details</h4>
+<p>This is another command that will not accept any parameters but take you to a
+selection menu. The menu will show the game mods you have installed and allows
+you to pick one for "activation".</p>
+<p>When a mod is "active", the editor will bring the contents of the mod's
+database.arz file. From that point on, respecing, leveling, mastery/class
+modifications will be take into consideration the data from the mod.</p>
+<h3 id="mod-clear">mod clear</h3>
+<p>Deselect the currently selected mod</p>
+<hr />
+<h2 id="class-manipulation">Class manipulation</h2>
+<h3 id="class">class</h3>
+<p>Displays the classes/masteries of the loaded character</p>
+<h3 id="class-add">class add</h3>
+<p>Add a class/mastery by name</p>
+<h4 id="usage_8">Usage</h4>
+<p><code>class add &lt;mastery name&gt;</code></p>
+<p>The editor is able to accept any mastery name that is listed in <code>class
+list</code>, which should include all masteries added by mods.</p>
+<p>This command is mostly included for the sake of completeness, as you'll most
+likely pick your mastery directly from within the game.</p>
+<h3 id="class-list">class list</h3>
+<p>Display classes/masteries known to the editor.</p>
+<p>This includes masteries added by mods. Please see the 'mod' commands to
+configure which GD mod the editor should consider when manipulating character
+masteries.</p>
+<h3 id="class-remove">class remove</h3>
+<p>Remove a class/mastery by name</p>
+<h4 id="usage_9">Usage</h4>
+<p><code>class remove &lt;mastery name&gt;</code></p>
+<p>The editor is able to accept any mastery name that is listed in <code>class
+list</code>, which should include all masteries added by mods.</p>
+<hr />
+<h2 id="database-exploration">Database exploration</h2>
+<h3 id="db">db</h3>
+<p>Explore the database interactively</p>
+<h3 id="usage_10">Usage</h3>
+<p><code>db &lt;record path&gt;</code></p>
+<h4 id="example">Example</h4>
+<p><code>db records/items/gearfeet</code> shows all known boots/foot-wear in the game
+<code>db records/items/gearfeet/d010</code> shows the database record for "Earthshatter Treads"</p>
+<h4 id="details_10">Details</h4>
+<p>This command is similar to the "show" command. Whereas the "show" command lets
+you explore the character file like a directory structure, the "db" command
+allows you to explore the game database like a directory structure.</p>
+<p>Partial path matching rules also apply.</p>
+<h3 id="q">q</h3>
+<p>Query the database</p>
+<h4 id="usage_11">Usage</h4>
+<p><code>q &lt;match condition&gt; &lt;match condition&gt; ...</code></p>
+<h4 id="example_1">Example</h4>
+<p><code>q key~offensivePhysicalMin</code> find all records that has some field key that
+partially matches "offensivePhysicalMin"</p>
+<p><code>q offensivePhysicalMin&gt;50</code> find all records/items/affixes that causes
+minimum physical damage of 50</p>
+<p><code>q offensivePhysicalMin&gt;50 levelRequirement&lt;20</code> find all
+records/items/affixes that causes minimum physical damage of 50 and can be
+equipment by characters lower than level 20</p>
+<p><code>q recordname~axe</code> finds all records where the name partially matches the
+string "axe"</p>
+<h4 id="details_11">Details</h4>
+<p>Uh... Are you really reading this? Let me just say... it's very unlikely that
+you're going to need this command.</p>
+<p>The game db holds <strong>a bit</strong> of data. There are some 30k records the last time I
+looked. This is just a <em>little</em> too much to manually search through. This
+command lets you sift through the database and narrow down the results to
+something that can be examined manually.</p>
+<p>The game's database records are kept in what's known as "key/value" pairs aka
+hashtable/dictionaries. The command accepts a number of match condition that
+performs a single test on the key or the value or both. If a record passes all
+the listed conditions in the "query", then the record will be collected and
+displayed sometime in the future.</p>
+<h4 id="match-condition">Match condition</h4>
+<p>A match condition takes the form of
+<code>&lt;match target&gt; &lt;operator&gt; &lt;match value&gt;</code></p>
+<p>A <code>&lt;match target&gt;</code> can be the string "recordname", "key", "value", or the
+partial name of a key.</p>
+<p><code>&lt;operator&gt;</code> needs to be one of the following:</p>
+<table>
+<thead>
+<tr>
+<th>operator</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>~</td>
+<td>partial string match against <match value></td>
+</tr>
+<tr>
+<td>*=</td>
+<td>partial string match against <match value></td>
+</tr>
+<tr>
+<td>=</td>
+<td>exact match against <match value></td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>less than or equal to</td>
+</tr>
+</tbody>
+</table>
+<p>A <code>&lt;match value&gt;</code> can be a integer, a float, a quoted string, or any string</p>
+<h4 id="result-ordering">Result ordering</h4>
+<p>The editor will display the first 10 matched records, ordered by their
+recordname. You can alter the ordering by adding a clause in the form of "order
+<partial field name>".</p>
+<p>The editor will always order in descending order if an order clause is provided.</p>
+<h3 id="qshow">qshow</h3>
+<p>Show the next page in the current query result</p>
+<h4 id="details_12">Details</h4>
+<p>Often a query will return <strong>many</strong> results. Each record is displayed in The
+editor only shows 10 records at a time. Running this command will cause the next
+10 command to be displayed.</p>
+<p>If the last result has been shown, running this command again will "wrap-around"
+and start showing from the first matched record again.</p>
+<h3 id="qn">qn</h3>
+<p>It's short for "query next". Does the same thing as 'qshow'. This is just an
+alias to be able to see the "next" set of results.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting Started
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../faq/" title="FAQ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                FAQ
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-102949209-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
 </html>

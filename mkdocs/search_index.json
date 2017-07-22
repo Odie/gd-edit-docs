@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "gd-edit\n\n\nEdit your GD character quickly from the commandline!\n\n\n\n\ngd-edit is a handy little utility that lets you modify your Grim Dawn\ncharacters however you like! Be warned though that this \nis\n a commandline\nutility. If working with commandline programs seem like a relic of the past for\nyou, you may also want to consider using \nGD\nstash\n.\n\n\nInstallation\n\n\nThis little program needs Java 8 to run. To get your very own copy, visit\n\njava.com\n.\n\n\nThen, please grab the version for your platform:\n\n\n\n\n\n\nWindows version\n\n\n\n\n\n\nLinux version\n\n\n\n\n\n\nJust double click the downloaded exe and you're ready to go!\n\n\nSetting up\n\n\nIf you're running the steam version GD, the program should hopefully find your\ninstallation and be ready to go right out of the box.\n\n\nIf you're not running the steam version, or if you have GD installed in some\nsuper secret custom path, then you'll need to help the program find your game\ninstallation and save directory.\n\n\nIn those cases, please run the following commands the first time you fire up\nthe editor:\n\n\ngamedir \nlong path to game installation directory here\n\nsavedir \nlong path to save game directory here\n\n\n\n\n\n\n\nNote\n\n\nThe directory paths should placed inside double quotes. Otherwise, the program\nwill stop processing the path when it encounters the first 'space' character in\nthe path!\n\n\n\n\nFurther help\n\n\nIs something not working? Need some help?\n\n\nPlease see the \nFAQ\n! \n\n\nOR...\n\n\nUse the search button at the top of the page!\n\n\nOR...\n\n\nLeave a message in the \nGD forums\n and I'll try to get back to you as soon as I can!\n\n\nOther tools\n\n\nIf you've tried the tool, but commandline tools simply isn't your cup of tea,\nyou might want to take a look at:\n\n\n\n\nGD Stash\n\n\nGD Defiler", 
+            "text": "gd-edit\n\n\n\n\nEdit your GD character quickly from the commandline!\n\n\n\n\ngd-edit is a handy little utility that lets you modify your Grim Dawn\ncharacters however you like! Be warned though that this \nis\n a commandline\nutility. If working with commandline programs seem like a relic of the past for\nyou, you may also want to consider using \nGD\nstash\n.\n\n\nInstallation\n\n\nThis little program needs Java 8 to run. To get your very own copy, visit\n\njava.com\n.\n\n\nThen, please grab the version for your platform:\n\n\n\n\n\n\nWindows version\n\n\n\n\n\n\nLinux version\n\n\n\n\n\n\nJust double click the downloaded exe and you're ready to go!\n\n\nSetting up\n\n\nIf you're running the steam version GD, the program should hopefully find your\ninstallation and be ready to go right out of the box.\n\n\nIf you're not running the steam version, or if you have GD installed in some\nsuper secret custom path, then you'll need to help the program find your game\ninstallation and save directory.\n\n\nIn those cases, please run the following commands the first time you fire up\nthe editor:\n\n\ngamedir \nlong path to game installation directory here\n\nsavedir \nlong path to save game directory here\n\n\n\n\n\n\n\nNote\n\n\nThe directory paths should placed inside double quotes. Otherwise, the program\nwill stop processing the path when it encounters the first 'space' character in\nthe path!\n\n\n\n\nFurther help\n\n\nIs something not working? Need some help?\n\n\nPlease see the \nFAQ\n!\n\n\nOR...\n\n\nUse the search button at the top of the page!\n\n\nOR...\n\n\nLeave a message in the \nGD forums\n and I'll try to get back to you as soon as I can!\n\n\nOther tools\n\n\nIf you've tried the tool, but commandline tools simply isn't your cup of tea,\nyou might want to take a look at:\n\n\n\n\nGD Stash\n\n\nGD Defiler", 
             "title": "Getting Started"
         }, 
         {
@@ -22,7 +22,7 @@
         }, 
         {
             "location": "/#further-help", 
-            "text": "Is something not working? Need some help?  Please see the  FAQ !   OR...  Use the search button at the top of the page!  OR...  Leave a message in the  GD forums  and I'll try to get back to you as soon as I can!", 
+            "text": "Is something not working? Need some help?  Please see the  FAQ !  OR...  Use the search button at the top of the page!  OR...  Leave a message in the  GD forums  and I'll try to get back to you as soon as I can!", 
             "title": "Further help"
         }, 
         {
@@ -32,17 +32,332 @@
         }, 
         {
             "location": "/commands/", 
-            "text": "Commands\n\n\nThe things that makes the editor go!\n\n\n\n\nOh, looky! A placeholder page!\n\n\nPlease use the \"help\" command for now! x)", 
+            "text": "Commands\n\n\n\n\nThe things that makes the editor go!\n\n\n\n\nA commandline program usually gives you a bunch of commands that are somewhat\n\"low-level\". You can string together multiple commands and change/edit things\nthe way you want.\n\n\nSo! If you somehow can't find a \nsingle\n command that does exact what you want,\nyou probably want to try breaking that task down to multiple commands and\nexecuting them one at a time.\n\n\n\n\nNote\n\n\nIf anything in the documentation starts sounding like gibberish, don't\nworry! The explanations are there for the sake of completeness. You can use\nthe editor just fine without knowing all the nitty-gritty details!\n\n\n\n\nBasic commands\n\n\nshow\n\n\nExplore your data in your save file like a directory path.\n\n\n\n\nTip\n\n\nIf you're able to see the field using \"show\", you can change the field using \"set\".\n\n\n\n\nUsage\n\n\nshow \nfield path\n\n\n\n\n\nExamples\n\n\nshow inventory-sacks\n shows content of \"inventory-sacks\" field\n\n\nshow inv\n shows the content of the only field that matches \"inv\" which\nhappens to be \"inventory-sacks\"\n\n\nshow inv/0\n shows content of the first inventory\n\n\nshow inv/0/items\n shows all items in the first inventory\n\n\nshow inv/0/items/4\n shows 5th item in the first inventory\n\n\nDetails\n\n\nThe character file holds quite a bit of binary data that's typically hard to\nexplore. This command lets you look around the contents of the file almost as if\nyou're exploring directories.\n\n\nEach path component in the field path needs to be separated by a '/'.\n\n\nPartial field matching\n\n\nEach component is also used to partially match against potential fields.\n\n\nFor example, \"\nin\n\" will match against \"level-\nin\n-bio\", \"sh\nin\ne\", \"skill-po\nin\nts\", and more.\n\n\nAs long as the component uniquely identifies a single field and the field is a\ncollection, the editor will allow you to continue navigating deeper into the data\nhierarchy by chaining additional field components.\n\n\n--\n\n\nset\n\n\nSet fields in the save file\n\n\nUsage\n\n\nset \nfield path\n \nnew value here\n\nset \nfield path to inventory items\n \nitem name\n \noptional character level\n\nset \nfield path to inventory items collection\n \nitem name\n \noptional character level\n\n\n\n\n\nExamples\n\n\nset iron 1000000\n gives your character 1,000,000 iron for all your shopping needs\n\nset character-name Morty\n changes your character name to Morty\n\nset inv/0/items \"sacred hammer of eternal wrath\"\n puts a new fancy item into your inventory\n\n\nDetails\n\n\nThe 'set' command is actually 2 commands rolled into 1.\n\n\nSetting values\n\n\nset \nfield path\n \nnew value here\n\n\nIn the case where the field path refers to an actual value such as: integer, floats, strings, and booleans. It will just set the value to the new value you provided. It will do its best to coerce the value you entered to the correct type.\n\n\nItem creation\n\n\nset \nfield path to inventory items\n \nitem name\n \noptional character level\n\nset \nfield path to inventory items collection\n \nitem name\n \noptional character level\n\n\n\n\n\nIn the case where the field path refers to an item or an item collection, the editor will attempt to generate an item that matches the \n you entered. The editor does this by looking at the available affixes in the game. When possible, it will use \"legal\" affixes for the base item you asked for.\n\n\nIf you gave the editor an item collection, such as 'inv/0/items', it will try to find some empty spot in the inventory to place the item into.\n\n\n\n\nThe editor needs access to the game database for item creation to work. If\nthe editor throws an error during item creation, it is very likely that you\nneed to configure the gamedir correctly.\n\n\n\n\n--\n\n\nwrite\n\n\nWrites out the character that is currently loaded\n\n\nUsage\n\n\nwrite\nwrite \nnew character name\n\n\n\n\n\nDetails\n\n\nwrite\n writes out the currently loaded character. A backup is always made\nfirst so you can try to go back to a previous save file if anything should go\nwrong. If you changed your \"character-name\" at some point, the editor will also\nmove your save files to the matching directory so the game can find it.\n\n\n\n\nWarning\n\n\nWhile the editor does its best to try \nnot\n clobbering your save file,\nit'd be advisable to make periodic backups on your own, \njust in case\n.\n\n\n\n\nwrite \nnew character name\n writes out a new copy of the loaded character\nafter renaming the character.\n\n\n--\n\n\nload\n\n\nLoad from a save file\n\n\nSyntax\n\n\nload\n\n\n\n\nDetails\n\n\nThis is an odd command. This is the only command that will take you to a\ndifferent menu. It will actually unload your current character, if any, it then\nshows you the character selection menu.\n\n\nYou probably expected the command look something like \nload \ncharacter name\n That's not really ideal because:\n\n\n\n\nYou may have several savedir configured and have character of the same name\n\n\nIt's not clear which characters have been found and \ncan\n be loaded without a menu\n\n\n\n\n--\n\n\nupdate\n\n\nUpdate to the latest version of gd-edit\n\n\nDetails\n\n\nThe editor will check for a new version if it hasn't done so in the past 24\nhours. If a new version is found, a prompt should be shown shortly after the\neditor is started.\n\n\nRunning the \nupdate\n command actually starts the download and relaunches the\neditor, if possible.\n\n\n--\n\n\nexit\n\n\nJust exits the program. Pretty straightforward!\n\n\n\n\nConvenience commands\n\n\nThese are commands that typically require complicated operations on the character to complete. While the editor gives you a lot of tools to dig around the game db and alter your save file, sometimes, you just need a bit more oomph out of the editor.\n\n\nlevel\n\n\nSet the level of the loaded character to a new value\n\n\nUsage\n\n\nlevel \nnew level\n\n\nDetails\n\n\nYou can level the character both up and down. This command will update the following fields:\n\n\n\n\ncharacter level (3 separate fields)\n\n\nattribute points\n\n\nskill points\n\n\nexperience points\n\n\n\n\nrespec\n\n\nRespecs the loaded character\n\n\nUsage\n\n\nrespec\nrespec attributes\nrespec devotions\nrespec skills\nrespec all\n\n\n\n\nDetails\n\n\nrespec\n, by itself, is the same \nrespec all\n.\n\n\nThis is useful when you want to turn your character into another build\ncompletely. Alternatively, you can also respec only attributes, devotions, or\nskills, if you just want to tweak your build a bit and avoid having to pick\neverything all over again.\n\n\n\n\nNote\n\n\nIn case it isn't clear, the editor doesn't provide any way of actually\npicking devotions and skills. You'll have to jump back into the game to do\nthat.\n\n\n\n\n\n\nConfiguration\n\n\nsavedir\n\n\nSets the save game directory to a path\n\n\nUsage\n\n\nsavedir\nsavedir \npath to save directory\n\n\n\n\n\nDetails\n\n\nThe editor already looks in the following directory by default:\n\n\n\n\nSteam cloud save directory (fetched from windows registry)\n\n\nDocuments\\My Games\\Grim Dawn\\save\\main\n\n\n\n\nIf, for some reason, the save directory doesn't reside in either of these\nlocations, you can use this command to add yet another path for the editor to\nlook into.\n\n\n\n\nNote\n\n\nPlease point to the save\\main directory. Because... reasons?\n\n\n\n\nsavedir clear\n\n\nRemoves the previous set game directory\n\n\ngamedir\n\n\nSets the game installation directory to a path\n\n\n\n\nWarning\n\n\nA lot of the editor commands will not work unless the gamedir is configured!\n\n\n\n\nUsage\n\n\ngamedir\ngamedir \npath to game install directory\n\n\n\n\n\nDetails\n\n\nThe editor will fetch the steam install directory, then look into\n\"\\steamapps\\common\\Grim Dawn\" sub-directory. If you're not using steam or if\nyou've installed Grim Dawn to another directory, you'll need to use this command\nto help the editor find the installation directory.\n\n\nThe editor needs \"database\\database.arz\" and \"resources\\Text_EN.arc\" to resolve\naffixes, their readable names, among other pieces of data required by various\ncommands. Setting this isn't \nstrictly\n required if you're only using the 'show'\nand 'set' command of the editor. However, it's very likely you'll soon want to\ncreate items by name and respec your character, etc etc.\n\n\ngamedir clear\n\n\nRemoves the previously set game installation directory\n\n\nmod\n\n\nDisplays the mod currently selected\n\n\nmod pick\n\n\nPicks an installed mod to activate\n\n\nUsage\n\n\nmod pick\n\n\nDetails\n\n\nThis is another command that will not accept any parameters but take you to a\nselection menu. The menu will show the game mods you have installed and allows\nyou to pick one for \"activation\".\n\n\nWhen a mod is \"active\", the editor will bring the contents of the mod's\ndatabase.arz file. From that point on, respecing, leveling, mastery/class\nmodifications will be take into consideration the data from the mod.\n\n\nmod clear\n\n\nDeselect the currently selected mod\n\n\n\n\nClass manipulation\n\n\nclass\n\n\nDisplays the classes/masteries of the loaded character\n\n\nclass add\n\n\nAdd a class/mastery by name\n\n\nUsage\n\n\nclass add \nmastery name\n\n\nThe editor is able to accept any mastery name that is listed in \nclass\nlist\n, which should include all masteries added by mods.\n\n\nThis command is mostly included for the sake of completeness, as you'll most\nlikely pick your mastery directly from within the game.\n\n\nclass list\n\n\nDisplay classes/masteries known to the editor.\n\n\nThis includes masteries added by mods. Please see the 'mod' commands to\nconfigure which GD mod the editor should consider when manipulating character\nmasteries.\n\n\nclass remove\n\n\nRemove a class/mastery by name\n\n\nUsage\n\n\nclass remove \nmastery name\n\n\nThe editor is able to accept any mastery name that is listed in \nclass\nlist\n, which should include all masteries added by mods.\n\n\n\n\nDatabase exploration\n\n\ndb\n\n\nExplore the database interactively\n\n\nUsage\n\n\ndb \nrecord path\n\n\nExample\n\n\ndb records/items/gearfeet\n shows all known boots/foot-wear in the game\n\ndb records/items/gearfeet/d010\n shows the database record for \"Earthshatter Treads\"\n\n\nDetails\n\n\nThis command is similar to the \"show\" command. Whereas the \"show\" command lets\nyou explore the character file like a directory structure, the \"db\" command\nallows you to explore the game database like a directory structure.\n\n\nPartial path matching rules also apply.\n\n\nq\n\n\nQuery the database\n\n\nUsage\n\n\nq \nmatch condition\n \nmatch condition\n ...\n\n\nExample\n\n\nq key~offensivePhysicalMin\n find all records that has some field key that\npartially matches \"offensivePhysicalMin\"\n\n\nq offensivePhysicalMin\n50\n find all records/items/affixes that causes\nminimum physical damage of 50\n\n\nq offensivePhysicalMin\n50 levelRequirement\n20\n find all\nrecords/items/affixes that causes minimum physical damage of 50 and can be\nequipment by characters lower than level 20\n\n\nq recordname~axe\n finds all records where the name partially matches the\nstring \"axe\"\n\n\nDetails\n\n\nUh... Are you really reading this? Let me just say... it's very unlikely that\nyou're going to need this command.\n\n\nThe game db holds \na bit\n of data. There are some 30k records the last time I\nlooked. This is just a \nlittle\n too much to manually search through. This\ncommand lets you sift through the database and narrow down the results to\nsomething that can be examined manually.\n\n\nThe game's database records are kept in what's known as \"key/value\" pairs aka\nhashtable/dictionaries. The command accepts a number of match condition that\nperforms a single test on the key or the value or both. If a record passes all\nthe listed conditions in the \"query\", then the record will be collected and\ndisplayed sometime in the future.\n\n\nMatch condition\n\n\nA match condition takes the form of\n\nmatch target\n \noperator\n \nmatch value\n\n\nA \nmatch target\n can be the string \"recordname\", \"key\", \"value\", or the\npartial name of a key.\n\n\noperator\n needs to be one of the following:\n\n\n\n\n\n\n\n\noperator\n\n\nmeaning\n\n\n\n\n\n\n\n\n\n\n~\n\n\npartial string match against \n\n\n\n\n\n\n*=\n\n\npartial string match against \n\n\n\n\n\n\n=\n\n\nexact match against \n\n\n\n\n\n\n!=\n\n\nnot equal\n\n\n\n\n\n\n\n\ngreater than\n\n\n\n\n\n\n=\n\n\ngreater than or equal to\n\n\n\n\n\n\n\n\nless than\n\n\n\n\n\n\n=\n\n\nless than or equal to\n\n\n\n\n\n\n\n\nA \nmatch value\n can be a integer, a float, a quoted string, or any string\n\n\nResult ordering\n\n\nThe editor will display the first 10 matched records, ordered by their\nrecordname. You can alter the ordering by adding a clause in the form of \"order\n\n\".\n\n\nThe editor will always order in descending order if an order clause is provided.\n\n\nqshow\n\n\nShow the next page in the current query result\n\n\nDetails\n\n\nOften a query will return \nmany\n results. Each record is displayed in The\neditor only shows 10 records at a time. Running this command will cause the next\n10 command to be displayed.\n\n\nIf the last result has been shown, running this command again will \"wrap-around\"\nand start showing from the first matched record again.\n\n\nqn\n\n\nIt's short for \"query next\". Does the same thing as 'qshow'. This is just an\nalias to be able to see the \"next\" set of results.", 
             "title": "Commands"
         }, 
         {
             "location": "/commands/#commands", 
-            "text": "The things that makes the editor go!   Oh, looky! A placeholder page!  Please use the \"help\" command for now! x)", 
+            "text": "The things that makes the editor go!   A commandline program usually gives you a bunch of commands that are somewhat\n\"low-level\". You can string together multiple commands and change/edit things\nthe way you want.  So! If you somehow can't find a  single  command that does exact what you want,\nyou probably want to try breaking that task down to multiple commands and\nexecuting them one at a time.   Note  If anything in the documentation starts sounding like gibberish, don't\nworry! The explanations are there for the sake of completeness. You can use\nthe editor just fine without knowing all the nitty-gritty details!", 
             "title": "Commands"
         }, 
         {
+            "location": "/commands/#basic-commands", 
+            "text": "", 
+            "title": "Basic commands"
+        }, 
+        {
+            "location": "/commands/#show", 
+            "text": "Explore your data in your save file like a directory path.   Tip  If you're able to see the field using \"show\", you can change the field using \"set\".", 
+            "title": "show"
+        }, 
+        {
+            "location": "/commands/#usage", 
+            "text": "show  field path", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#examples", 
+            "text": "show inventory-sacks  shows content of \"inventory-sacks\" field  show inv  shows the content of the only field that matches \"inv\" which\nhappens to be \"inventory-sacks\"  show inv/0  shows content of the first inventory  show inv/0/items  shows all items in the first inventory  show inv/0/items/4  shows 5th item in the first inventory", 
+            "title": "Examples"
+        }, 
+        {
+            "location": "/commands/#details", 
+            "text": "The character file holds quite a bit of binary data that's typically hard to\nexplore. This command lets you look around the contents of the file almost as if\nyou're exploring directories.  Each path component in the field path needs to be separated by a '/'.", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#partial-field-matching", 
+            "text": "Each component is also used to partially match against potential fields.  For example, \" in \" will match against \"level- in -bio\", \"sh in e\", \"skill-po in ts\", and more.  As long as the component uniquely identifies a single field and the field is a\ncollection, the editor will allow you to continue navigating deeper into the data\nhierarchy by chaining additional field components.  --", 
+            "title": "Partial field matching"
+        }, 
+        {
+            "location": "/commands/#set", 
+            "text": "Set fields in the save file", 
+            "title": "set"
+        }, 
+        {
+            "location": "/commands/#usage_1", 
+            "text": "set  field path   new value here \nset  field path to inventory items   item name   optional character level \nset  field path to inventory items collection   item name   optional character level", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#examples_1", 
+            "text": "set iron 1000000  gives your character 1,000,000 iron for all your shopping needs set character-name Morty  changes your character name to Morty set inv/0/items \"sacred hammer of eternal wrath\"  puts a new fancy item into your inventory", 
+            "title": "Examples"
+        }, 
+        {
+            "location": "/commands/#details_1", 
+            "text": "The 'set' command is actually 2 commands rolled into 1.", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#setting-values", 
+            "text": "set  field path   new value here  In the case where the field path refers to an actual value such as: integer, floats, strings, and booleans. It will just set the value to the new value you provided. It will do its best to coerce the value you entered to the correct type.", 
+            "title": "Setting values"
+        }, 
+        {
+            "location": "/commands/#item-creation", 
+            "text": "set  field path to inventory items   item name   optional character level \nset  field path to inventory items collection   item name   optional character level   In the case where the field path refers to an item or an item collection, the editor will attempt to generate an item that matches the   you entered. The editor does this by looking at the available affixes in the game. When possible, it will use \"legal\" affixes for the base item you asked for.  If you gave the editor an item collection, such as 'inv/0/items', it will try to find some empty spot in the inventory to place the item into.   The editor needs access to the game database for item creation to work. If\nthe editor throws an error during item creation, it is very likely that you\nneed to configure the gamedir correctly.   --", 
+            "title": "Item creation"
+        }, 
+        {
+            "location": "/commands/#write", 
+            "text": "Writes out the character that is currently loaded", 
+            "title": "write"
+        }, 
+        {
+            "location": "/commands/#usage_2", 
+            "text": "write\nwrite  new character name", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#details_2", 
+            "text": "write  writes out the currently loaded character. A backup is always made\nfirst so you can try to go back to a previous save file if anything should go\nwrong. If you changed your \"character-name\" at some point, the editor will also\nmove your save files to the matching directory so the game can find it.   Warning  While the editor does its best to try  not  clobbering your save file,\nit'd be advisable to make periodic backups on your own,  just in case .   write  new character name  writes out a new copy of the loaded character\nafter renaming the character.  --", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#load", 
+            "text": "Load from a save file", 
+            "title": "load"
+        }, 
+        {
+            "location": "/commands/#syntax", 
+            "text": "load", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/commands/#details_3", 
+            "text": "This is an odd command. This is the only command that will take you to a\ndifferent menu. It will actually unload your current character, if any, it then\nshows you the character selection menu.  You probably expected the command look something like  load  character name  That's not really ideal because:   You may have several savedir configured and have character of the same name  It's not clear which characters have been found and  can  be loaded without a menu   --", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#update", 
+            "text": "Update to the latest version of gd-edit", 
+            "title": "update"
+        }, 
+        {
+            "location": "/commands/#details_4", 
+            "text": "The editor will check for a new version if it hasn't done so in the past 24\nhours. If a new version is found, a prompt should be shown shortly after the\neditor is started.  Running the  update  command actually starts the download and relaunches the\neditor, if possible.  --", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#exit", 
+            "text": "Just exits the program. Pretty straightforward!", 
+            "title": "exit"
+        }, 
+        {
+            "location": "/commands/#convenience-commands", 
+            "text": "These are commands that typically require complicated operations on the character to complete. While the editor gives you a lot of tools to dig around the game db and alter your save file, sometimes, you just need a bit more oomph out of the editor.", 
+            "title": "Convenience commands"
+        }, 
+        {
+            "location": "/commands/#level", 
+            "text": "Set the level of the loaded character to a new value", 
+            "title": "level"
+        }, 
+        {
+            "location": "/commands/#usage_3", 
+            "text": "level  new level", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#details_5", 
+            "text": "You can level the character both up and down. This command will update the following fields:   character level (3 separate fields)  attribute points  skill points  experience points", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#respec", 
+            "text": "Respecs the loaded character", 
+            "title": "respec"
+        }, 
+        {
+            "location": "/commands/#usage_4", 
+            "text": "respec\nrespec attributes\nrespec devotions\nrespec skills\nrespec all", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#details_6", 
+            "text": "respec , by itself, is the same  respec all .  This is useful when you want to turn your character into another build\ncompletely. Alternatively, you can also respec only attributes, devotions, or\nskills, if you just want to tweak your build a bit and avoid having to pick\neverything all over again.   Note  In case it isn't clear, the editor doesn't provide any way of actually\npicking devotions and skills. You'll have to jump back into the game to do\nthat.", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#configuration", 
+            "text": "", 
+            "title": "Configuration"
+        }, 
+        {
+            "location": "/commands/#savedir", 
+            "text": "Sets the save game directory to a path", 
+            "title": "savedir"
+        }, 
+        {
+            "location": "/commands/#usage_5", 
+            "text": "savedir\nsavedir  path to save directory", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#details_7", 
+            "text": "The editor already looks in the following directory by default:   Steam cloud save directory (fetched from windows registry)  Documents\\My Games\\Grim Dawn\\save\\main   If, for some reason, the save directory doesn't reside in either of these\nlocations, you can use this command to add yet another path for the editor to\nlook into.   Note  Please point to the save\\main directory. Because... reasons?", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#savedir-clear", 
+            "text": "Removes the previous set game directory", 
+            "title": "savedir clear"
+        }, 
+        {
+            "location": "/commands/#gamedir", 
+            "text": "Sets the game installation directory to a path   Warning  A lot of the editor commands will not work unless the gamedir is configured!", 
+            "title": "gamedir"
+        }, 
+        {
+            "location": "/commands/#usage_6", 
+            "text": "gamedir\ngamedir  path to game install directory", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#details_8", 
+            "text": "The editor will fetch the steam install directory, then look into\n\"\\steamapps\\common\\Grim Dawn\" sub-directory. If you're not using steam or if\nyou've installed Grim Dawn to another directory, you'll need to use this command\nto help the editor find the installation directory.  The editor needs \"database\\database.arz\" and \"resources\\Text_EN.arc\" to resolve\naffixes, their readable names, among other pieces of data required by various\ncommands. Setting this isn't  strictly  required if you're only using the 'show'\nand 'set' command of the editor. However, it's very likely you'll soon want to\ncreate items by name and respec your character, etc etc.", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#gamedir-clear", 
+            "text": "Removes the previously set game installation directory", 
+            "title": "gamedir clear"
+        }, 
+        {
+            "location": "/commands/#mod", 
+            "text": "Displays the mod currently selected", 
+            "title": "mod"
+        }, 
+        {
+            "location": "/commands/#mod-pick", 
+            "text": "Picks an installed mod to activate", 
+            "title": "mod pick"
+        }, 
+        {
+            "location": "/commands/#usage_7", 
+            "text": "mod pick", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#details_9", 
+            "text": "This is another command that will not accept any parameters but take you to a\nselection menu. The menu will show the game mods you have installed and allows\nyou to pick one for \"activation\".  When a mod is \"active\", the editor will bring the contents of the mod's\ndatabase.arz file. From that point on, respecing, leveling, mastery/class\nmodifications will be take into consideration the data from the mod.", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#mod-clear", 
+            "text": "Deselect the currently selected mod", 
+            "title": "mod clear"
+        }, 
+        {
+            "location": "/commands/#class-manipulation", 
+            "text": "", 
+            "title": "Class manipulation"
+        }, 
+        {
+            "location": "/commands/#class", 
+            "text": "Displays the classes/masteries of the loaded character", 
+            "title": "class"
+        }, 
+        {
+            "location": "/commands/#class-add", 
+            "text": "Add a class/mastery by name", 
+            "title": "class add"
+        }, 
+        {
+            "location": "/commands/#usage_8", 
+            "text": "class add  mastery name  The editor is able to accept any mastery name that is listed in  class\nlist , which should include all masteries added by mods.  This command is mostly included for the sake of completeness, as you'll most\nlikely pick your mastery directly from within the game.", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#class-list", 
+            "text": "Display classes/masteries known to the editor.  This includes masteries added by mods. Please see the 'mod' commands to\nconfigure which GD mod the editor should consider when manipulating character\nmasteries.", 
+            "title": "class list"
+        }, 
+        {
+            "location": "/commands/#class-remove", 
+            "text": "Remove a class/mastery by name", 
+            "title": "class remove"
+        }, 
+        {
+            "location": "/commands/#usage_9", 
+            "text": "class remove  mastery name  The editor is able to accept any mastery name that is listed in  class\nlist , which should include all masteries added by mods.", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#database-exploration", 
+            "text": "", 
+            "title": "Database exploration"
+        }, 
+        {
+            "location": "/commands/#db", 
+            "text": "Explore the database interactively", 
+            "title": "db"
+        }, 
+        {
+            "location": "/commands/#usage_10", 
+            "text": "db  record path", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#example", 
+            "text": "db records/items/gearfeet  shows all known boots/foot-wear in the game db records/items/gearfeet/d010  shows the database record for \"Earthshatter Treads\"", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/commands/#details_10", 
+            "text": "This command is similar to the \"show\" command. Whereas the \"show\" command lets\nyou explore the character file like a directory structure, the \"db\" command\nallows you to explore the game database like a directory structure.  Partial path matching rules also apply.", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#q", 
+            "text": "Query the database", 
+            "title": "q"
+        }, 
+        {
+            "location": "/commands/#usage_11", 
+            "text": "q  match condition   match condition  ...", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/commands/#example_1", 
+            "text": "q key~offensivePhysicalMin  find all records that has some field key that\npartially matches \"offensivePhysicalMin\"  q offensivePhysicalMin 50  find all records/items/affixes that causes\nminimum physical damage of 50  q offensivePhysicalMin 50 levelRequirement 20  find all\nrecords/items/affixes that causes minimum physical damage of 50 and can be\nequipment by characters lower than level 20  q recordname~axe  finds all records where the name partially matches the\nstring \"axe\"", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/commands/#details_11", 
+            "text": "Uh... Are you really reading this? Let me just say... it's very unlikely that\nyou're going to need this command.  The game db holds  a bit  of data. There are some 30k records the last time I\nlooked. This is just a  little  too much to manually search through. This\ncommand lets you sift through the database and narrow down the results to\nsomething that can be examined manually.  The game's database records are kept in what's known as \"key/value\" pairs aka\nhashtable/dictionaries. The command accepts a number of match condition that\nperforms a single test on the key or the value or both. If a record passes all\nthe listed conditions in the \"query\", then the record will be collected and\ndisplayed sometime in the future.", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#match-condition", 
+            "text": "A match condition takes the form of match target   operator   match value  A  match target  can be the string \"recordname\", \"key\", \"value\", or the\npartial name of a key.  operator  needs to be one of the following:     operator  meaning      ~  partial string match against     *=  partial string match against     =  exact match against     !=  not equal     greater than    =  greater than or equal to     less than    =  less than or equal to     A  match value  can be a integer, a float, a quoted string, or any string", 
+            "title": "Match condition"
+        }, 
+        {
+            "location": "/commands/#result-ordering", 
+            "text": "The editor will display the first 10 matched records, ordered by their\nrecordname. You can alter the ordering by adding a clause in the form of \"order \".  The editor will always order in descending order if an order clause is provided.", 
+            "title": "Result ordering"
+        }, 
+        {
+            "location": "/commands/#qshow", 
+            "text": "Show the next page in the current query result", 
+            "title": "qshow"
+        }, 
+        {
+            "location": "/commands/#details_12", 
+            "text": "Often a query will return  many  results. Each record is displayed in The\neditor only shows 10 records at a time. Running this command will cause the next\n10 command to be displayed.  If the last result has been shown, running this command again will \"wrap-around\"\nand start showing from the first matched record again.", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/commands/#qn", 
+            "text": "It's short for \"query next\". Does the same thing as 'qshow'. This is just an\nalias to be able to see the \"next\" set of results.", 
+            "title": "qn"
+        }, 
+        {
             "location": "/faq/", 
-            "text": "FAQ\n\n\nAn answer for every question you have!\n\n\n\n\nHow do I add an item to my inventory/sack?\n\n\nset inv/1/items \nan item name\n 100\n        |            |          |\n        |            |          |--\n optional character level override\n        |            |\n        |            |--\n new item name\n        |\n        |--\n First sack (but considered \nsecond inventory\n)\n\n\n\n\nThis will generate the item you named and place it into the first inventory\nsack. The command usually generates an item with affixes that's suitable for\nyour character's level. However, you can also ask the editor to pretend your\ncharacter is at another level by adding an optional number to the end, as is\ndone in this example. This makes it so the editor will generate an item\nsuitable for a character of level 100.\n\n\n\n\nNote\n\n\nIf the inventory/sack you specified doesn't have the space to hold the\nitem, the editor will complain loudly. You might want to try another sack\nthen.\n\n\n\n\n\n\nHow do I change the stack count on an item?\n\n\nYou'll have to know exactly \nwhere\n that item is to change the stack count. You\nmay want to look through your inventory with the 'show' command like so:\n\n\nshow inv/1/items\n\n\n\n\nAfter you've located the item you want to alter, do:\n\n\nset inv/1/items/0/count 99\n        |       |       |\n        |       |       |--\n new item stack count\n        |       |\n        |       |--\n First item\n        |\n        |--\n First sack (but considered \nsecond inventory\n)\n\n\n\n\n\n\nHow do I respec my character?\n\n\nYou want the \"respec\" command!\n\n\nIt's as simple as running:\n\n\nrespec\n\n\n\n\n\n\nHow to I change my faction alignment?\n\n\nTo see your faction values:\n\n\nshow faction-values\n\n\n\n\nTo set them:\n\n\nset faction-values/\nfaction index\n/faction-value \nnew faction value here\n\n\n\n\n\nwhere the faction index is a number from 0-21. The \"show\" command should have\nshown you which faction corresponds to which index.", 
+            "text": "FAQ\n\n\n\n\nAn answer for every question you have!\n\n\n\n\nHow do I add an item to my inventory/sack?\n\n\nset inv/1/items \nan item name\n 100\n        |            |          |\n        |            |          |--\n optional character level override\n        |            |\n        |            |--\n new item name\n        |\n        |--\n First sack (but considered \nsecond inventory\n)\n\n\n\n\nThis will generate the item you named and place it into the first inventory\nsack. The command usually generates an item with affixes that's suitable for\nyour character's level. However, you can also ask the editor to pretend your\ncharacter is at another level by adding an optional number to the end, as is\ndone in this example. This makes it so the editor will generate an item\nsuitable for a character of level 100.\n\n\n\n\nNote\n\n\nIf the inventory/sack you specified doesn't have the space to hold the\nitem, the editor will complain loudly. You might want to try another sack\nthen.\n\n\n\n\n\n\nHow do I change the stack count on an item?\n\n\nYou'll have to know exactly \nwhere\n that item is to change the stack count. You\nmay want to look through your inventory with the 'show' command like so:\n\n\nshow inv/1/items\n\n\n\n\nAfter you've located the item you want to alter, do:\n\n\nset inv/1/items/0/count 99\n        |       |       |\n        |       |       |--\n new item stack count\n        |       |\n        |       |--\n First item\n        |\n        |--\n First sack (but considered \nsecond inventory\n)\n\n\n\n\n\n\nHow do I respec my character?\n\n\nYou want the \"respec\" command!\n\n\nIt's as simple as running:\n\n\nrespec\n\n\n\n\n\n\nHow to I change my faction alignment?\n\n\nTo see your faction values:\n\n\nshow faction-values\n\n\n\n\nTo set them:\n\n\nset faction-values/\nfaction index\n/faction-value \nnew faction value here\n\n\n\n\n\nwhere the faction index is a number from 0-21. The \"show\" command should have\nshown you which faction corresponds to which index.", 
             "title": "FAQ"
         }, 
         {
