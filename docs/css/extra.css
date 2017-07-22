@@ -1,17 +1,4 @@
-div.col-md-9 h1:first-of-type {
-    text-align: center;
-    font-size: 60px;
-    font-weight: 300;
-}
-
-div.col-md-9 h1:first-of-type + p {
-    text-align: center;
-}
-
-.bs-sidenav .second-level {
-    margin-left: 1em;
-}
-
-.bs-sidenav .third-level {
-    margin-left: 2em;
+.md-typeset .gemoji {
+    width: 2rem;
+    vertical-align: text-top;
 }
