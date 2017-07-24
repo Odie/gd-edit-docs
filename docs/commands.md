@@ -23,7 +23,7 @@ executing them one at a time.
 
 ## Basic commands
 
-### show
+### command: _show_
 
 Explore your data in your save file like a directory path.
 
@@ -67,7 +67,7 @@ hierarchy by chaining additional field components.
 
 --
 
-### set
+### command: _set_
 
 Set fields in the save file
 
@@ -110,7 +110,7 @@ If you gave the editor an item collection, such as 'inv/0/items', it will try to
 
 --
 
-### write
+### command: _write_
 
 Writes out the character that is currently loaded
 
@@ -138,7 +138,7 @@ after renaming the character.
 
 --
 
-### load
+### command: _load_
 
 Load from a save file
 
@@ -160,7 +160,7 @@ You probably expected the command look something like ``` load <character name>
 
 --
 
-### update
+### command: _update_
 
 Update to the latest version of gd-edit
 
@@ -174,7 +174,7 @@ editor, if possible.
 
 --
 
-### exit
+### command: _exit_
 
 Just exits the program. Pretty straightforward!
 
@@ -183,7 +183,7 @@ Just exits the program. Pretty straightforward!
 ## Convenience commands
 These are commands that typically require complicated operations on the character to complete. While the editor gives you a lot of tools to dig around the game db and alter your save file, sometimes, you just need a bit more oomph out of the editor.
 
-### level
+### command: _level_
 
 Set the level of the loaded character to a new value
 
@@ -198,7 +198,9 @@ You can level the character both up and down. This command will update the follo
 - skill points
 - experience points
 
-### respec
+--
+
+### command: _respec_
 
 Respecs the loaded character
 
@@ -230,7 +232,7 @@ everything all over again.
 ## Configuration
 
 
-### savedir
+### command: _savedir_
 
 Sets the save game directory to a path
 
@@ -254,11 +256,15 @@ look into.
 
     Please point to the save\main directory. Because... reasons?
 
-### savedir clear
+--
+
+### command: _savedir clear_
 
 Removes the previous set game directory
 
-### gamedir
+--
+
+### command: _gamedir_
 
 Sets the game installation directory to a path
 
@@ -284,16 +290,21 @@ commands. Setting this isn't *strictly* required if you're only using the 'show'
 and 'set' command of the editor. However, it's very likely you'll soon want to
 create items by name and respec your character, etc etc.
 
+--
 
-### gamedir clear
+### command: _gamedir clear_
 
 Removes the previously set game installation directory
 
-### mod
+--
+
+### command: _mod_
 
 Displays the mod currently selected
 
-### mod pick
+--
+
+### command: _mod pick_
 
 Picks an installed mod to activate
 
@@ -309,7 +320,9 @@ When a mod is "active", the editor will bring the contents of the mod's
 database.arz file. From that point on, respecing, leveling, mastery/class
 modifications will be take into consideration the data from the mod.
 
-### mod clear
+--
+
+### command: _mod clear_
 
 Deselect the currently selected mod
 
@@ -317,11 +330,13 @@ Deselect the currently selected mod
 
 ## Class manipulation
 
-### class
+### command: _class_
 
 Displays the classes/masteries of the loaded character
 
-### class add
+--
+
+### command: _class add_
 
 Add a class/mastery by name
 
@@ -334,7 +349,9 @@ list```, which should include all masteries added by mods.
 This command is mostly included for the sake of completeness, as you'll most
 likely pick your mastery directly from within the game.
 
-### class list
+--
+
+### command: _class list_
 
 Display classes/masteries known to the editor.
 
@@ -342,7 +359,9 @@ This includes masteries added by mods. Please see the 'mod' commands to
 configure which GD mod the editor should consider when manipulating character
 masteries.
 
-### class remove
+--
+
+### command: _class remove_
 
 Remove a class/mastery by name
 
@@ -356,11 +375,11 @@ list```, which should include all masteries added by mods.
 
 ## Database exploration
 
-### db
+### command: _db_
 
 Explore the database interactively
 
-### Usage
+#### Usage
 ``` db <record path> ```
 
 #### Example
@@ -374,7 +393,9 @@ allows you to explore the game database like a directory structure.
 
 Partial path matching rules also apply.
 
-### q
+--
+
+### command: _q_
 
 Query the database
 
@@ -440,7 +461,9 @@ recordname. You can alter the ordering by adding a clause in the form of "order
 
 The editor will always order in descending order if an order clause is provided.
 
-### qshow
+--
+
+### command: _qshow_
 
 Show the next page in the current query result
 
@@ -452,7 +475,9 @@ editor only shows 10 records at a time. Running this command will cause the next
 If the last result has been shown, running this command again will "wrap-around"
 and start showing from the first matched record again.
 
-### qn
+--
+
+### command: _qn_
 
 It's short for "query next". Does the same thing as 'qshow'. This is just an
 alias to be able to see the "next" set of results.

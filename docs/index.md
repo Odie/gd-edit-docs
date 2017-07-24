@@ -16,7 +16,7 @@ stash](http://www.grimdawn.com/forums/showthread.php?t=23414).
 This little program needs Java 8 to run. To get your very own copy, visit
 [java.com](https://java.com/download/).
 
-Then, please grab the version for your platform:
+Then, grab a copy of the editor for your platform:
 
 - [Windows version](http://tiny.cc/gdedexe)
 
@@ -35,7 +35,7 @@ installation and save directory.
 In those cases, please run the following commands the first time you fire up
 the editor:
 
-```sh
+```
 gamedir "long path to game installation directory here"
 savedir "long path to save game directory here"
 ```
