@@ -6,7 +6,7 @@ An answer for every question you have!
 
 ---
 ## How do I add an item to my inventory/sack?
-```sh
+```
 set inv/1/items "an item name" 100
         |            |          |
         |            |          |--> optional character level override
@@ -32,12 +32,12 @@ suitable for a character of level 100.
 ## How do I change the stack count on an item?
 You'll have to know exactly *where* that item is to change the stack count. You
 may want to look through your inventory with the 'show' command like so:
-```sh
+```
 show inv/1/items
 ```
 
 After you've located the item you want to alter, do:
-```sh
+```
 set inv/1/items/0/count 99
         |       |       |
         |       |       |--> new item stack count
@@ -53,7 +53,7 @@ set inv/1/items/0/count 99
 You want the "respec" command!
 
 It's as simple as running:
-```sh
+```
 respec
 ```
 
@@ -61,13 +61,41 @@ respec
 ## How to I change my faction alignment?
 
 To see your faction values:
-```sh
+```
 show faction-values
 ```
 
 To set them:
-```sh
+```
 set faction-values/<faction index>/faction-value <new faction value here>
 ```
 where the faction index is a number from 0-21. The "show" command should have
 shown you which faction corresponds to which index.
+
+
+---
+## How do I change my character name?
+
+```set character-name <new character name>```
+
+After this, just use the "w" command to write out your character file and
+complete the rename.
+
+```set character-name Thor``` changes your character name to Thor.
+
+```set character-name "God of Thunder"``` changes your character name to a fancy name
+that includes spaces!
+
+!!! Note
+
+    I have not tested if there is a limit to the length of the name. If you find
+    that your new character name crashes the game... Well, make it shorter? =)
+
+
+---
+## How do I make a copy of my character?
+```write <new character name>``` will make a copy of your character with a
+different name.
+
+Be sure to restart steam (if you're using steam and cloud saves) to have the new
+character be recognized.
