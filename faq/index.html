@@ -214,6 +214,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-do-i-change-my-character-name" title="How do I change my character name?" class="md-nav__link">
+    How do I change my character name?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-make-a-copy-of-my-character" title="How do I make a copy of my character?" class="md-nav__link">
+    How do I make a copy of my character?
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -271,6 +285,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-do-i-change-my-character-name" title="How do I change my character name?" class="md-nav__link">
+    How do I change my character name?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-make-a-copy-of-my-character" title="How do I make a copy of my character?" class="md-nav__link">
+    How do I make a copy of my character?
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -291,7 +319,7 @@
 <p>An answer for every question you have!</p>
 <hr />
 <h2 id="how-do-i-add-an-item-to-my-inventorysack">How do I add an item to my inventory/sack?</h2>
-<pre><code class="sh">set inv/1/items &quot;an item name&quot; 100
+<pre><code>set inv/1/items &quot;an item name&quot; 100
         |            |          |
         |            |          |--&gt; optional character level override
         |            |
@@ -316,11 +344,11 @@ then.</p>
 <h2 id="how-do-i-change-the-stack-count-on-an-item">How do I change the stack count on an item?</h2>
 <p>You'll have to know exactly <em>where</em> that item is to change the stack count. You
 may want to look through your inventory with the 'show' command like so:</p>
-<pre><code class="sh">show inv/1/items
+<pre><code>show inv/1/items
 </code></pre>
 
 <p>After you've located the item you want to alter, do:</p>
-<pre><code class="sh">set inv/1/items/0/count 99
+<pre><code>set inv/1/items/0/count 99
         |       |       |
         |       |       |--&gt; new item stack count
         |       |
@@ -333,21 +361,40 @@ may want to look through your inventory with the 'show' command like so:</p>
 <h2 id="how-do-i-respec-my-character">How do I respec my character?</h2>
 <p>You want the "respec" command!</p>
 <p>It's as simple as running:</p>
-<pre><code class="sh">respec
+<pre><code>respec
 </code></pre>
 
 <hr />
 <h2 id="how-to-i-change-my-faction-alignment">How to I change my faction alignment?</h2>
 <p>To see your faction values:</p>
-<pre><code class="sh">show faction-values
+<pre><code>show faction-values
 </code></pre>
 
 <p>To set them:</p>
-<pre><code class="sh">set faction-values/&lt;faction index&gt;/faction-value &lt;new faction value here&gt;
+<pre><code>set faction-values/&lt;faction index&gt;/faction-value &lt;new faction value here&gt;
 </code></pre>
 
 <p>where the faction index is a number from 0-21. The "show" command should have
 shown you which faction corresponds to which index.</p>
+<hr />
+<h2 id="how-do-i-change-my-character-name">How do I change my character name?</h2>
+<p><code>set character-name &lt;new character name&gt;</code></p>
+<p>After this, just use the "w" command to write out your character file and
+complete the rename.</p>
+<p><code>set character-name Thor</code> changes your character name to Thor.</p>
+<p><code>set character-name "God of Thunder"</code> changes your character name to a fancy name
+that includes spaces!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I have not tested if there is a limit to the length of the name. If you find
+that your new character name crashes the game... Well, make it shorter? =)</p>
+</div>
+<hr />
+<h2 id="how-do-i-make-a-copy-of-my-character">How do I make a copy of my character?</h2>
+<p><code>write &lt;new character name&gt;</code> will make a copy of your character with a
+different name.</p>
+<p>Be sure to restart steam (if you're using steam and cloud saves) to have the new
+character be recognized.</p>
                 
                   
                 
