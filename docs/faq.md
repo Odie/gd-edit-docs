@@ -108,4 +108,68 @@ this number becomes 1, the game will not let you load up the character anymore.
 This also means you can revive your character by having your save file report "this character
 has never died" with this command:
 
-```set death-count 0```
+```
+set death-count 0
+```
+
+---
+## How do I change choices I've made in a quest?
+Unfortunately, this editor is not able to do anything regarding your quest
+progress or choices.
+
+Your quest progress lives in a "quest.gdd" file in your character's save
+directory on a per-"world" and per-difficulty basis. The editor simply does
+not understand the file and its contents.
+
+
+---
+## Can I edit the stats of item in my inventory?
+This isn't possible due to the way GD deals with items and their variations.
+An item doesn't record any of the stats it has. Instead, it references 1 or more
+records from the game's database file. The database records themselves store
+the exact stat and/or ranges.
+
+As seen in the game, an item consists of a "base item" with additional effects
+that may come from a "prefix" and/or a "suffix". This is exactly how an item is
+stored in the character file also.
+
+An item is stored as a reference to a "base item" db record, "prefix" db record,
+and "suffix" db record. When the game runs, it presumably grabs all the interesting
+fields from these records and figures out the final combined stats for the item.
+Variations to the stats are provided by adding a bit of randomness into each of the
+stats. The "randomness" is recorded as a "random-seed" field with the item.
+
+Since an item consists of (roughly) a "base item", "prefix", "suffix", and a
+"random seed". There is no room to simply tweak an item by, for example, adding
++100 melee damage directly onto an item. It is possible to generate variations of
+the same item by tweaking the random seed on an item, though it's not clear *how*
+a changed random seed might affect the item.
+
+---
+## Can the editor help find the "best version" of an item by trying different random seeds?
+The short answer is no.
+
+Due to the sheer number of possible random seeds, exhaustively trying every
+possible value is impractical. An item's seed is stored internally as a 32 bit
+integer, giving it roughly 4 billion (2^32) item variations.
+
+*If* we can manage to get the editor to perform the exact calculations the game
+does to derive the final stats of an item, given a seed, AND the editor is
+running on a decently fast computer that can look through each variation in about 1ms,
+it will still take roughly
+
+```
+(2^32 / 1000ms/sec / 60sec/min / 60min/hour / 24hr/day / 30day/month)
+=> 1.65 months
+```
+
+to locate the "best variation".
+
+There are various other issues like having to replicate the exact logic and RNG
+to derive an item's exact stats in the first place. There is also the fact that
+"best stats" is subjective/relative to a character build.
+
+Practically, if you really *really* **really** cared about getting a "good" version of
+an item, you might want to try a few different seeds just to make sure you
+didn't get one of the worst rolls. But beyond that, your time is probably better
+spent enjoying the game. =)
