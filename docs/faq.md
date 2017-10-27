@@ -99,3 +99,13 @@ different name.
 
 Be sure to restart steam (if you're using steam and cloud saves) to have the new
 character be recognized.
+
+---
+## How do I revive my hardcore mode character?
+The game tracks how many times your character has died. For hardcore mode characters, once
+this number becomes 1, the game will not let you load up the character anymore.
+
+This also means you can revive your character by having your save file report "this character
+has never died" with this command:
+
+```set death-count 0```
