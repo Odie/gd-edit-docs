@@ -235,6 +235,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-do-i-change-choices-ive-made-in-a-quest" title="How do I change choices I've made in a quest?" class="md-nav__link">
+    How do I change choices I've made in a quest?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-edit-the-stats-of-item-in-my-inventory" title="Can I edit the stats of item in my inventory?" class="md-nav__link">
+    Can I edit the stats of item in my inventory?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-the-editor-help-find-the-best-version-of-an-item-by-trying-different-random-seeds" title="Can the editor help find the "best version" of an item by trying different random seeds?" class="md-nav__link">
+    Can the editor help find the "best version" of an item by trying different random seeds?
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -309,6 +330,27 @@
         <li class="md-nav__item">
   <a href="#how-do-i-revive-my-hardcore-mode-character" title="How do I revive my hardcore mode character?" class="md-nav__link">
     How do I revive my hardcore mode character?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-change-choices-ive-made-in-a-quest" title="How do I change choices I've made in a quest?" class="md-nav__link">
+    How do I change choices I've made in a quest?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-edit-the-stats-of-item-in-my-inventory" title="Can I edit the stats of item in my inventory?" class="md-nav__link">
+    Can I edit the stats of item in my inventory?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-the-editor-help-find-the-best-version-of-an-item-by-trying-different-random-seeds" title="Can the editor help find the "best version" of an item by trying different random seeds?" class="md-nav__link">
+    Can the editor help find the "best version" of an item by trying different random seeds?
   </a>
   
 </li>
@@ -415,7 +457,57 @@ character be recognized.</p>
 this number becomes 1, the game will not let you load up the character anymore.</p>
 <p>This also means you can revive your character by having your save file report "this character
 has never died" with this command:</p>
-<p><code>set death-count 0</code></p>
+<pre><code>set death-count 0
+</code></pre>
+
+<hr />
+<h2 id="how-do-i-change-choices-ive-made-in-a-quest">How do I change choices I've made in a quest?</h2>
+<p>Unfortunately, this editor is not able to do anything regarding your quest
+progress or choices.</p>
+<p>Your quest progress lives in a "quest.gdd" file in your character's save
+directory on a per-"world" and per-difficulty basis. The editor simply does
+not understand the file and its contents.</p>
+<hr />
+<h2 id="can-i-edit-the-stats-of-item-in-my-inventory">Can I edit the stats of item in my inventory?</h2>
+<p>This isn't possible due to the way GD deals with items and their variations.
+An item doesn't record any of the stats it has. Instead, it references 1 or more
+records from the game's database file. The database records themselves store
+the exact stat and/or ranges.</p>
+<p>As seen in the game, an item consists of a "base item" with additional effects
+that may come from a "prefix" and/or a "suffix". This is exactly how an item is
+stored in the character file also.</p>
+<p>An item is stored as a reference to a "base item" db record, "prefix" db record,
+and "suffix" db record. When the game runs, it presumably grabs all the interesting
+fields from these records and figures out the final combined stats for the item.
+Variations to the stats are provided by adding a bit of randomness into each of the
+stats. The "randomness" is recorded as a "random-seed" field with the item.</p>
+<p>Since an item consists of (roughly) a "base item", "prefix", "suffix", and a
+"random seed". There is no room to simply tweak an item by, for example, adding
++100 melee damage directly onto an item. It is possible to generate variations of
+the same item by tweaking the random seed on an item, though it's not clear <em>how</em>
+a changed random seed might affect the item.</p>
+<hr />
+<h2 id="can-the-editor-help-find-the-best-version-of-an-item-by-trying-different-random-seeds">Can the editor help find the "best version" of an item by trying different random seeds?</h2>
+<p>The short answer is no.</p>
+<p>Due to the sheer number of possible random seeds, exhaustively trying every
+possible value is impractical. An item's seed is stored internally as a 32 bit
+integer, giving it roughly 4 billion (2^32) item variations.</p>
+<p><em>If</em> we can manage to get the editor to perform the exact calculations the game
+does to derive the final stats of an item, given a seed, AND the editor is
+running on a decently fast computer that can look through each variation in about 1ms,
+it will still take roughly</p>
+<pre><code>(2^32 / 1000ms/sec / 60sec/min / 60min/hour / 24hr/day / 30day/month)
+=&gt; 1.65 months
+</code></pre>
+
+<p>to locate the "best variation".</p>
+<p>There are various other issues like having to replicate the exact logic and RNG
+to derive an item's exact stats in the first place. There is also the fact that
+"best stats" is subjective/relative to a character build.</p>
+<p>Practically, if you really <em>really</em> <strong>really</strong> cared about getting a "good" version of
+an item, you might want to try a few different seeds just to make sure you
+didn't get one of the worst rolls. But beyond that, your time is probably better
+spent enjoying the game. =)</p>
                 
                   
                 
