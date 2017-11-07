@@ -1431,16 +1431,16 @@ set &lt;field path to inventory items collection&gt; &lt;item name&gt; &lt;optio
 </code></pre>
 
 <h4 id="examples_1">Examples</h4>
-<p><code>set iron 1000000</code> gives your character 1,000,000 iron for all your shopping needs
-<code>set character-name Morty</code> changes your character name to Morty
-<code>set inv/0/items "sacred hammer of eternal wrath"</code> puts a new fancy item into your inventory</p>
+<p><code>set iron 1000000</code> gives your character 1,000,000 iron for all your shopping needs</p>
+<p><code>set character-name Morty</code> changes your character name to Morty</p>
+<p><code>set inv/0/items "sacred hammer of eternal wrath"</code> puts a new fancy item into your inventory</p>
 <h4 id="details_1">Details</h4>
 <p>The 'set' command is actually 2 commands rolled into 1.</p>
 <h5 id="setting-values">Setting values</h5>
 <p><code>set &lt;field path&gt; &lt;new value here&gt;</code></p>
 <p>In the case where the field path refers to an actual value such as: integer, floats, strings, and booleans. It will just set the value to the new value you provided. It will do its best to coerce the value you entered to the correct type.</p>
 <h5 id="item-creation">Item creation</h5>
-<pre><code>set &lt;field path to inventory items&gt; &lt;item name&gt; &lt;optional character level&gt;
+<pre><code>set &lt;field path to inventory item&gt; &lt;item name&gt; &lt;optional character level&gt;
 set &lt;field path to inventory items collection&gt; &lt;item name&gt; &lt;optional character level&gt;
 </code></pre>
 
@@ -1467,7 +1467,7 @@ move your save files to the matching directory so the game can find it.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>While the editor does its best to try <strong>not</strong> clobbering your save file,
-it'd be advisable to make periodic backups on your own, <strong>just in case</strong>.</p>
+it would be advisable to make periodic backups on your own, <strong>just in case</strong>.</p>
 </div>
 <p><code>write &lt;new character name&gt;</code> writes out a new copy of the loaded character
 after renaming the character.</p>
@@ -1480,8 +1480,8 @@ after renaming the character.</p>
 
 <h4 id="details_3">Details</h4>
 <p>This is an odd command. This is the only command that will take you to a
-different menu. It will actually unload your current character, if any, it then
-shows you the character selection menu.</p>
+different menu. It will actually unload your current character, if any, then
+show you the character selection menu.</p>
 <p>You probably expected the command look something like <code>load &lt;character name&gt;</code> That's not really ideal because:</p>
 <ul>
 <li>You may have several savedir configured and have character of the same name</li>
@@ -1616,6 +1616,10 @@ modifications will be take into consideration the data from the mod.</p>
 <p><code>class add &lt;mastery name&gt;</code></p>
 <p>The editor is able to accept any mastery name that is listed in <code>class
 list</code>, which should include all masteries added by mods.</p>
+<p>The editor will try to remove 1 skill point from the character if possible.
+This is done for the sake of keeping skill point use consistent. If the
+character has no skill points left to use, the editor will throw up a prompt
+to let you do it anyway, if you'd like.</p>
 <p>This command is mostly included for the sake of completeness, as you'll most
 likely pick your mastery directly from within the game.</p>
 <p>--</p>
@@ -1631,6 +1635,10 @@ masteries.</p>
 <p><code>class remove &lt;mastery name&gt;</code></p>
 <p>The editor is able to accept any mastery name that is listed in <code>class
 list</code>, which should include all masteries added by mods.</p>
+<p>Removing a mastery will <em>not</em> skills associated with the mastery. Any bonuses you
+gain from those skills should continue to be active. However, you'll loose the ability
+to put points into those skills from the game's UI.</p>
+<p>Removing a mastery will refund any skill points you've put into the mastery.</p>
 <hr />
 <h2 id="database-exploration">Database exploration</h2>
 <h3 id="command-db">command: <em>db</em></h3>
@@ -1638,8 +1646,8 @@ list</code>, which should include all masteries added by mods.</p>
 <h4 id="usage_10">Usage</h4>
 <p><code>db &lt;record path&gt;</code></p>
 <h4 id="example">Example</h4>
-<p><code>db records/items/gearfeet</code> shows all known boots/foot-wear in the game
-<code>db records/items/gearfeet/d010</code> shows the database record for "Earthshatter Treads"</p>
+<p><code>db records/items/gearfeet</code> shows all known boots/foot-wear in the game</p>
+<p><code>db records/items/gearfeet/d010</code> shows the database record for "Earthshatter Treads"</p>
 <h4 id="details_10">Details</h4>
 <p>This command is similar to the "show" command. Whereas the "show" command lets
 you explore the character file like a directory structure, the "db" command
