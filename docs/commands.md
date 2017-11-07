@@ -80,7 +80,9 @@ set <field path to inventory items collection> <item name> <optional character l
 
 #### Examples
 ``` set iron 1000000 ``` gives your character 1,000,000 iron for all your shopping needs
+
 ``` set character-name Morty``` changes your character name to Morty
+
 ``` set inv/0/items "sacred hammer of eternal wrath"``` puts a new fancy item into your inventory
 
 #### Details
@@ -94,7 +96,7 @@ In the case where the field path refers to an actual value such as: integer, flo
 
 ##### Item creation
 ```
-set <field path to inventory items> <item name> <optional character level>
+set <field path to inventory item> <item name> <optional character level>
 set <field path to inventory items collection> <item name> <optional character level>
 ```
 
@@ -130,7 +132,7 @@ move your save files to the matching directory so the game can find it.
 !!! Warning
 
     While the editor does its best to try **not** clobbering your save file,
-    it'd be advisable to make periodic backups on your own, **just in case**.
+    it would be advisable to make periodic backups on your own, **just in case**.
 
 ``` write <new character name> ``` writes out a new copy of the loaded character
 after renaming the character.
@@ -149,8 +151,8 @@ load
 
 #### Details
 This is an odd command. This is the only command that will take you to a
-different menu. It will actually unload your current character, if any, it then
-shows you the character selection menu.
+different menu. It will actually unload your current character, if any, then
+show you the character selection menu.
 
 You probably expected the command look something like ``` load <character name>
 ``` That's not really ideal because:
@@ -346,6 +348,11 @@ Add a class/mastery by name
 The editor is able to accept any mastery name that is listed in ```class
 list```, which should include all masteries added by mods.
 
+The editor will try to remove 1 skill point from the character if possible.
+This is done for the sake of keeping skill point use consistent. If the
+character has no skill points left to use, the editor will throw up a prompt
+to let you do it anyway, if you'd like.
+
 This command is mostly included for the sake of completeness, as you'll most
 likely pick your mastery directly from within the game.
 
@@ -371,6 +378,12 @@ Remove a class/mastery by name
 The editor is able to accept any mastery name that is listed in ```class
 list```, which should include all masteries added by mods.
 
+Removing a mastery will *not* skills associated with the mastery. Any bonuses you
+gain from those skills should continue to be active. However, you'll loose the ability
+to put points into those skills from the game's UI.
+
+Removing a mastery will refund any skill points you've put into the mastery.
+
 ---
 
 ## Database exploration
@@ -384,6 +397,7 @@ Explore the database interactively
 
 #### Example
 ``` db records/items/gearfeet ``` shows all known boots/foot-wear in the game
+
 ``` db records/items/gearfeet/d010 ``` shows the database record for "Earthshatter Treads"
 
 #### Details
