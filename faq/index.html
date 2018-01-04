@@ -215,6 +215,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-do-i-revive-my-hardcore-character" title="How do I revive my hardcore character?" class="md-nav__link">
+    How do I revive my hardcore character?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-do-i-change-my-character-name" title="How do I change my character name?" class="md-nav__link">
     How do I change my character name?
   </a>
@@ -314,6 +321,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-do-i-revive-my-hardcore-character" title="How do I revive my hardcore character?" class="md-nav__link">
+    How do I revive my hardcore character?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-do-i-change-my-character-name" title="How do I change my character name?" class="md-nav__link">
     How do I change my character name?
   </a>
@@ -375,9 +389,9 @@
 <p>An answer for every question you have!</p>
 <hr />
 <h2 id="how-do-i-add-an-item-to-my-inventorysack">How do I add an item to my inventory/sack?</h2>
-<pre><code>set inv/1/items &quot;an item name&quot; 100
+<pre><code>set inv/1/items &quot;an item name&quot; 85
         |            |          |
-        |            |          |--&gt; optional character level override
+        |            |          |--&gt; optional item level cap
         |            |
         |            |--&gt; new item name
         |
@@ -385,11 +399,12 @@
 </code></pre>
 
 <p>This will generate the item you named and place it into the first inventory
-sack. The command usually generates an item with affixes that's suitable for
-your character's level. However, you can also ask the editor to pretend your
-character is at another level by adding an optional number to the end, as is
-done in this example. This makes it so the editor will generate an item
-suitable for a character of level 100.</p>
+sack. The command usually generates an item with affixes that's of the highest
+possible potency. This means it's very likely it will generate an item that your
+character may not be able to use. However, you can ask the editor to cap the
+required level of the generated of an item to a specific level, as is done in
+this example. This makes it so the editor will generate an item suitable for a
+character of level 85.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the inventory/sack you specified doesn't have the space to hold the
@@ -432,6 +447,12 @@ may want to look through your inventory with the 'show' command like so:</p>
 
 <p>where the faction index is a number from 0-21. The "show" command should have
 shown you which faction corresponds to which index.</p>
+<hr />
+<h2 id="how-do-i-revive-my-hardcore-character">How do I revive my hardcore character?</h2>
+<p>Set your death-count back to 0 using:</p>
+<pre><code>set death-count 0
+</code></pre>
+
 <hr />
 <h2 id="how-do-i-change-my-character-name">How do I change my character name?</h2>
 <p><code>set character-name &lt;new character name&gt;</code></p>
