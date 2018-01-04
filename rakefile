@@ -1,4 +1,8 @@
-task :default => :deploy
+task :default => :serve
+
+task :serve do
+	sh "mkdocs serve"
+end
 
 task :deploy do
 	sh "mkdocs gh-deploy"

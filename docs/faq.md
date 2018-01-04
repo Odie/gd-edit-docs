@@ -7,9 +7,9 @@ An answer for every question you have!
 ---
 ## How do I add an item to my inventory/sack?
 ```
-set inv/1/items "an item name" 100
+set inv/1/items "an item name" 85
         |            |          |
-        |            |          |--> optional character level override
+        |            |          |--> optional item level cap
         |            |
         |            |--> new item name
         |
@@ -17,11 +17,12 @@ set inv/1/items "an item name" 100
 ```
 
 This will generate the item you named and place it into the first inventory
-sack. The command usually generates an item with affixes that's suitable for
-your character's level. However, you can also ask the editor to pretend your
-character is at another level by adding an optional number to the end, as is
-done in this example. This makes it so the editor will generate an item
-suitable for a character of level 100.
+sack. The command usually generates an item with affixes that's of the highest
+possible potency. This means it's very likely it will generate an item that your
+character may not be able to use. However, you can ask the editor to cap the
+required level of the generated of an item to a specific level, as is done in
+this example. This makes it so the editor will generate an item suitable for a
+character of level 85.
 
 !!! Note
     If the inventory/sack you specified doesn't have the space to hold the
@@ -72,8 +73,16 @@ set faction-values/<faction index>/faction-value <new faction value here>
 where the faction index is a number from 0-21. The "show" command should have
 shown you which faction corresponds to which index.
 
+---
+## How do I revive my hardcore character?
+
+Set your death-count back to 0 using:
+```
+set death-count 0
+```
 
 ---
+
 ## How do I change my character name?
 
 ```set character-name <new character name>```
