@@ -112,6 +112,45 @@ If you gave the editor an item collection, such as 'inv/0/items', it will try to
 
 --
 
+### command: _find_
+
+Find/locate an item, equipment, skills, devotions, and factions by name.
+
+#### Usage
+```no-highlight
+find <partial name>
+```
+
+#### Examples
+``` find tonic ``` Find some item that contains the word tonic
+
+``` find "Maiven's Sphere of Protection" ``` Find a specific skill by name
+
+#### Details
+
+There can be a lot of data in your character file. Although the editor allows you to
+to edit any item on a field-by-field basis, it is difficult to find the item you may want
+to edit in the first place.
+
+The ```find``` command solves this problem by searching through every piece of data in the
+file and printing the location of things that partially matches the entered name. It is
+then possible to use other commands to for targetted edits.
+
+For example, if you're a bit low on health potions, you might do:
+
+```no-highlight
+> find tonic
+
+Tonic of Mending: inventory-sacks/0/inventory-items/0
+
+> set inventory-sacks/0/inventory-items/0/stack-count 99
+```
+
+In this example, we first the item entry for the tonic of mending, then change the stack
+count so we have 99 of it in the stack.
+
+--
+
 ### command: _write_
 
 Writes out the character that is currently loaded
