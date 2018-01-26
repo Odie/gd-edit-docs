@@ -151,6 +151,47 @@ count so we have 99 of it in the stack.
 
 --
 
+### command: _swap-variant_
+
+Swap between variants of an item's basename, prefix, or suffix
+
+#### Usage
+```no-highlight
+swap-variant <item path> 
+swap-variant <item path> basename
+swap-variant <item path> prefix
+swap-variant <item path> suffix
+```
+
+#### Examples
+``` swap-variant weapon-sets/0/items/0  ``` Change the basename/base item of
+the currently equipped weapon
+
+#### Details
+
+The editor's 'set' command can be used to generate items. It doesn't, however,
+allow for you to pick the exact variant you might want. For example, the
+legendary helm "Ravager's Dreadgaze" has 3 different variants, each with very
+different boosts attached. When the 'set' command goes about generating that
+item, it really does not know which one you want specifically. 
+
+```swap-variant``` solves this problem by letting you customize the item after
+item generation. The command can deal with swapping the base item (basename),
+prefix, or suffix.
+
+When the command runs, it looks through the game db for items/affixes of with
+the same name, then presents the found items in an on-screen menu. The menu
+works the same way as the character selection menu when the editor first starts
+up. You can make your selection by inputing a number and hitting enter.
+
+The editor will try to present only "interesting" fields in the item/affix. In
+this case, "interesting" means fields that are unique amongst all the variants.
+This means that the menu will not present the full list of boosts for the
+item/affix. But it should present enough information to make picking the
+desired variant possible.
+
+--
+
 ### command: _write_
 
 Writes out the character that is currently loaded
