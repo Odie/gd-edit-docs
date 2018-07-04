@@ -151,6 +151,40 @@ count so we have 99 of it in the stack.
 
 --
 
+### command: _find all_
+
+Apply the ```find``` command to all characters without loading them. This returns a list of found items, equipment, skills, devotions, and factions for each character.
+
+#### Usage
+```no-highlight
+find all <partial name>
+```
+
+#### Examples
+``` find all tonic ``` Find some item that contains the word tonic
+
+``` find all "Maiven's Sphere of Protection" ``` Find a specific skill by name
+
+#### Details
+
+This is a quick way to apply the ```find``` command to each character without having to load them first.
+
+For example, if you need a specific crafting material for one character, you might do:
+
+```no-highlight
+> find all "Ancient Heart"
+
+character:  [save directory]\main\_FirstCharacter\player.gdc
+Ancient Heart: inventory-sacks/0/inventory-items/36
+
+character:  [save directory]\main\_SecondCharacter\player.gdc
+Ancient Heart: inventory-sacks/2/inventory-items/6
+```
+
+This gives you a list of characters that have the item you're looking for, including the storage location.
+
+--
+
 ### command: _swap-variant_
 
 Swap between variants of an item's basename, prefix, or suffix
